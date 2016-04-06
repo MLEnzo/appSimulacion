@@ -33,13 +33,13 @@
             this.rdbFibonacci = new System.Windows.Forms.RadioButton();
             this.rdbCongruencia = new System.Windows.Forms.RadioButton();
             this.pnlVonNeumann = new System.Windows.Forms.Panel();
-            this.lblSemilla = new System.Windows.Forms.Label();
-            this.txbSemilla = new System.Windows.Forms.TextBox();
-            this.btnGenerar = new System.Windows.Forms.Button();
-            this.cbxCantidad = new System.Windows.Forms.CheckBox();
             this.txbCantidad = new System.Windows.Forms.TextBox();
-            this.txbSucesion = new System.Windows.Forms.TextBox();
+            this.mktbxSemilla = new System.Windows.Forms.MaskedTextBox();
             this.lblSucecion = new System.Windows.Forms.Label();
+            this.txbSucesion = new System.Windows.Forms.TextBox();
+            this.cbxCantidad = new System.Windows.Forms.CheckBox();
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.lblSemilla = new System.Windows.Forms.Label();
             this.pnlVonNeumann.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,64 +92,42 @@
             // 
             // pnlVonNeumann
             // 
+            this.pnlVonNeumann.Controls.Add(this.txbCantidad);
+            this.pnlVonNeumann.Controls.Add(this.mktbxSemilla);
             this.pnlVonNeumann.Controls.Add(this.lblSucecion);
             this.pnlVonNeumann.Controls.Add(this.txbSucesion);
-            this.pnlVonNeumann.Controls.Add(this.txbCantidad);
             this.pnlVonNeumann.Controls.Add(this.cbxCantidad);
             this.pnlVonNeumann.Controls.Add(this.btnGenerar);
-            this.pnlVonNeumann.Controls.Add(this.txbSemilla);
             this.pnlVonNeumann.Controls.Add(this.lblSemilla);
             this.pnlVonNeumann.Location = new System.Drawing.Point(40, 124);
             this.pnlVonNeumann.Name = "pnlVonNeumann";
             this.pnlVonNeumann.Size = new System.Drawing.Size(375, 173);
             this.pnlVonNeumann.TabIndex = 4;
             // 
-            // lblSemilla
-            // 
-            this.lblSemilla.AutoSize = true;
-            this.lblSemilla.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemilla.Location = new System.Drawing.Point(37, 16);
-            this.lblSemilla.Name = "lblSemilla";
-            this.lblSemilla.Size = new System.Drawing.Size(56, 19);
-            this.lblSemilla.TabIndex = 0;
-            this.lblSemilla.Text = "Semilla";
-            // 
-            // txbSemilla
-            // 
-            this.txbSemilla.Location = new System.Drawing.Point(106, 17);
-            this.txbSemilla.Name = "txbSemilla";
-            this.txbSemilla.Size = new System.Drawing.Size(120, 20);
-            this.txbSemilla.TabIndex = 1;
-            // 
-            // btnGenerar
-            // 
-            this.btnGenerar.Font = new System.Drawing.Font("Modern No. 20", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerar.Location = new System.Drawing.Point(269, 73);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(87, 50);
-            this.btnGenerar.TabIndex = 2;
-            this.btnGenerar.Text = "Generar";
-            this.btnGenerar.UseVisualStyleBackColor = true;
-            // 
-            // cbxCantidad
-            // 
-            this.cbxCantidad.AutoCheck = false;
-            this.cbxCantidad.AutoSize = true;
-            this.cbxCantidad.Location = new System.Drawing.Point(162, 47);
-            this.cbxCantidad.Name = "cbxCantidad";
-            this.cbxCantidad.Size = new System.Drawing.Size(111, 19);
-            this.cbxCantidad.TabIndex = 3;
-            this.cbxCantidad.Text = "Indicar Cantidad";
-            this.cbxCantidad.UseVisualStyleBackColor = true;
-            this.cbxCantidad.CheckedChanged += new System.EventHandler(this.cbxCantidad_CheckedChanged);
-            // 
             // txbCantidad
             // 
-            this.txbCantidad.Location = new System.Drawing.Point(106, 47);
+            this.txbCantidad.Location = new System.Drawing.Point(100, 45);
             this.txbCantidad.Name = "txbCantidad";
-            this.txbCantidad.Size = new System.Drawing.Size(45, 20);
-            this.txbCantidad.TabIndex = 4;
-            this.txbCantidad.Visible = false;
+            this.txbCantidad.Size = new System.Drawing.Size(56, 20);
+            this.txbCantidad.TabIndex = 8;
+           
+            // 
+            // mktbxSemilla
+            // 
+            this.mktbxSemilla.Location = new System.Drawing.Point(100, 14);
+            this.mktbxSemilla.Mask = "9999";
+            this.mktbxSemilla.Name = "mktbxSemilla";
+            this.mktbxSemilla.Size = new System.Drawing.Size(41, 20);
+            this.mktbxSemilla.TabIndex = 7;
+            // 
+            // lblSucecion
+            // 
+            this.lblSucecion.AutoSize = true;
+            this.lblSucecion.Location = new System.Drawing.Point(22, 92);
+            this.lblSucecion.Name = "lblSucecion";
+            this.lblSucecion.Size = new System.Drawing.Size(49, 15);
+            this.lblSucecion.TabIndex = 6;
+            this.lblSucecion.Text = "Sucecion";
             // 
             // txbSucesion
             // 
@@ -163,14 +141,36 @@
             this.txbSucesion.Size = new System.Drawing.Size(178, 50);
             this.txbSucesion.TabIndex = 5;
             // 
-            // lblSucecion
+            // cbxCantidad
             // 
-            this.lblSucecion.AutoSize = true;
-            this.lblSucecion.Location = new System.Drawing.Point(22, 92);
-            this.lblSucecion.Name = "lblSucecion";
-            this.lblSucecion.Size = new System.Drawing.Size(49, 15);
-            this.lblSucecion.TabIndex = 6;
-            this.lblSucecion.Text = "Sucecion";
+            this.cbxCantidad.AutoSize = true;
+            this.cbxCantidad.Location = new System.Drawing.Point(162, 47);
+            this.cbxCantidad.Name = "cbxCantidad";
+            this.cbxCantidad.Size = new System.Drawing.Size(111, 19);
+            this.cbxCantidad.TabIndex = 3;
+            this.cbxCantidad.Text = "Indicar Cantidad";
+            this.cbxCantidad.UseVisualStyleBackColor = true;
+            this.cbxCantidad.CheckedChanged += new System.EventHandler(this.cbxCantidad_CheckedChanged);
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Font = new System.Drawing.Font("Modern No. 20", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerar.Location = new System.Drawing.Point(269, 73);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(87, 50);
+            this.btnGenerar.TabIndex = 2;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            // 
+            // lblSemilla
+            // 
+            this.lblSemilla.AutoSize = true;
+            this.lblSemilla.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSemilla.Location = new System.Drawing.Point(37, 16);
+            this.lblSemilla.Name = "lblSemilla";
+            this.lblSemilla.Size = new System.Drawing.Size(56, 19);
+            this.lblSemilla.TabIndex = 0;
+            this.lblSemilla.Text = "Semilla";
             // 
             // Form1
             // 
@@ -201,11 +201,11 @@
         private System.Windows.Forms.Panel pnlVonNeumann;
         private System.Windows.Forms.Label lblSemilla;
         private System.Windows.Forms.Button btnGenerar;
-        private System.Windows.Forms.TextBox txbSemilla;
-        private System.Windows.Forms.TextBox txbCantidad;
         private System.Windows.Forms.CheckBox cbxCantidad;
         private System.Windows.Forms.Label lblSucecion;
         private System.Windows.Forms.TextBox txbSucesion;
+        private System.Windows.Forms.TextBox txbCantidad;
+        private System.Windows.Forms.MaskedTextBox mktbxSemilla;
     }
 }
 
