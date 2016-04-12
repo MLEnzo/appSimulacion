@@ -33,13 +33,16 @@
             this.rdbFibonacci = new System.Windows.Forms.RadioButton();
             this.rdbCongruencia = new System.Windows.Forms.RadioButton();
             this.pnlVonNeumann = new System.Windows.Forms.Panel();
-            this.txbCantidad = new System.Windows.Forms.TextBox();
-            this.mktbxSemilla = new System.Windows.Forms.MaskedTextBox();
-            this.lblSucecion = new System.Windows.Forms.Label();
+            this.txbCant = new System.Windows.Forms.TextBox();
+            this.txbSemilla = new System.Windows.Forms.TextBox();
             this.txbSucesion = new System.Windows.Forms.TextBox();
             this.cbxCantidad = new System.Windows.Forms.CheckBox();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.lblSemilla = new System.Windows.Forms.Label();
+            this.mktbxSemilla = new System.Windows.Forms.MaskedTextBox();
+            this.txbCantidad = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlVonNeumann.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,9 +95,9 @@
             // 
             // pnlVonNeumann
             // 
-            this.pnlVonNeumann.Controls.Add(this.txbCantidad);
-            this.pnlVonNeumann.Controls.Add(this.mktbxSemilla);
-            this.pnlVonNeumann.Controls.Add(this.lblSucecion);
+            this.pnlVonNeumann.Controls.Add(this.label2);
+            this.pnlVonNeumann.Controls.Add(this.txbCant);
+            this.pnlVonNeumann.Controls.Add(this.txbSemilla);
             this.pnlVonNeumann.Controls.Add(this.txbSucesion);
             this.pnlVonNeumann.Controls.Add(this.cbxCantidad);
             this.pnlVonNeumann.Controls.Add(this.btnGenerar);
@@ -104,30 +107,19 @@
             this.pnlVonNeumann.Size = new System.Drawing.Size(375, 173);
             this.pnlVonNeumann.TabIndex = 4;
             // 
-            // txbCantidad
+            // txbCant
             // 
-            this.txbCantidad.Location = new System.Drawing.Point(100, 45);
-            this.txbCantidad.Name = "txbCantidad";
-            this.txbCantidad.Size = new System.Drawing.Size(56, 20);
-            this.txbCantidad.TabIndex = 8;
-           
+            this.txbCant.Location = new System.Drawing.Point(83, 45);
+            this.txbCant.Name = "txbCant";
+            this.txbCant.Size = new System.Drawing.Size(73, 20);
+            this.txbCant.TabIndex = 7;
             // 
-            // mktbxSemilla
+            // txbSemilla
             // 
-            this.mktbxSemilla.Location = new System.Drawing.Point(100, 14);
-            this.mktbxSemilla.Mask = "9999";
-            this.mktbxSemilla.Name = "mktbxSemilla";
-            this.mktbxSemilla.Size = new System.Drawing.Size(41, 20);
-            this.mktbxSemilla.TabIndex = 7;
-            // 
-            // lblSucecion
-            // 
-            this.lblSucecion.AutoSize = true;
-            this.lblSucecion.Location = new System.Drawing.Point(22, 92);
-            this.lblSucecion.Name = "lblSucecion";
-            this.lblSucecion.Size = new System.Drawing.Size(49, 15);
-            this.lblSucecion.TabIndex = 6;
-            this.lblSucecion.Text = "Sucecion";
+            this.txbSemilla.Location = new System.Drawing.Point(83, 21);
+            this.txbSemilla.Name = "txbSemilla";
+            this.txbSemilla.Size = new System.Drawing.Size(73, 20);
+            this.txbSemilla.TabIndex = 6;
             // 
             // txbSucesion
             // 
@@ -161,16 +153,50 @@
             this.btnGenerar.TabIndex = 2;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // lblSemilla
             // 
             this.lblSemilla.AutoSize = true;
             this.lblSemilla.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemilla.Location = new System.Drawing.Point(37, 16);
+            this.lblSemilla.Location = new System.Drawing.Point(16, 20);
             this.lblSemilla.Name = "lblSemilla";
             this.lblSemilla.Size = new System.Drawing.Size(56, 19);
             this.lblSemilla.TabIndex = 0;
             this.lblSemilla.Text = "Semilla";
+            // 
+            // mktbxSemilla
+            // 
+            this.mktbxSemilla.Location = new System.Drawing.Point(100, 14);
+            this.mktbxSemilla.Mask = "9999";
+            this.mktbxSemilla.Name = "mktbxSemilla";
+            this.mktbxSemilla.Size = new System.Drawing.Size(41, 20);
+            this.mktbxSemilla.TabIndex = 7;
+            // 
+            // txbCantidad
+            // 
+            this.txbCantidad.Location = new System.Drawing.Point(100, 45);
+            this.txbCantidad.Name = "txbCantidad";
+            this.txbCantidad.Size = new System.Drawing.Size(56, 20);
+            this.txbCantidad.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 15);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Sucesion";
             // 
             // Form1
             // 
@@ -206,6 +232,10 @@
         private System.Windows.Forms.TextBox txbSucesion;
         private System.Windows.Forms.TextBox txbCantidad;
         private System.Windows.Forms.MaskedTextBox mktbxSemilla;
+        private System.Windows.Forms.TextBox txbCant;
+        private System.Windows.Forms.TextBox txbSemilla;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
