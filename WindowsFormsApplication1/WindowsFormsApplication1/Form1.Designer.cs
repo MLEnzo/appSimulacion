@@ -58,7 +58,7 @@
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Generadores";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblTitulo.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // rdbVonNeumann
             // 
@@ -70,7 +70,7 @@
             this.rdbVonNeumann.TabStop = true;
             this.rdbVonNeumann.Text = "Von Neumann";
             this.rdbVonNeumann.UseVisualStyleBackColor = true;
-            this.rdbVonNeumann.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            
             // 
             // rdbFibonacci
             // 

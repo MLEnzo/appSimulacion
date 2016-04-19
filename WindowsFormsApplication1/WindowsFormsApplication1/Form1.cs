@@ -21,16 +21,8 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        //agregar cantidad preferencial de numeros aleatorios
+        
+        //agregar cantidad preferencial de numeros aleatorios (EN METODO VON NEUMANN)
         private void cbxCantidad_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxCantidad.Checked == true)
