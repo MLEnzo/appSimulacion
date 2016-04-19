@@ -17,6 +17,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             txbCant.Visible = false;
             lblMayorA100.Visible = false;
+            txbCant.Text = "0";
 
         }
 
@@ -39,6 +40,7 @@ namespace WindowsFormsApplication1
             else {
 
                 txbCant.Visible = false;
+                
             }
         }
 
@@ -49,12 +51,28 @@ namespace WindowsFormsApplication1
             string s = "";
             string sus = "";          //inicializa variables
             string sus3 = "";
+            int cant;
+           
 
-
-            var x0 = Convert.ToInt64(txbSemilla.Text);      //asegura que se puede ungresar hasta 19 digitos de numeros 9
+            if (txbCant.Text == "")
+            {                        //verifica si en caso de que el usuario ingrese vacio la sasilla de cantidad 
+                cant = 4;
+            }
+            else {
+                cant = Convert.ToInt32(txbCant.Text); //obtiene cantidad de numeros deseado
+            }
 
             
-            while (sus3.Length <= 50)    //comprueba si es mayor o igua a 101 y empieza bucle
+            if (cant==0)
+            {
+                cant = 50;       //si el usuario no ingresa una cantidad deseada agregara por defecto una cantidad
+
+            }
+
+            var x0 = Convert.ToInt64(txbSemilla.Text);      //asegura que se puede ungresar hasta 19 digitos de numeros 9
+            
+            
+            while (sus3.Length <= cant)    //comprueba si es mayor o igua a 101 y empieza bucle
             {
                 lblMayorA100.Visible = false;
                 if (x0 >= 101)
@@ -94,13 +112,13 @@ namespace WindowsFormsApplication1
                 }
 
             }
-            txbSucesion.Text = sus3;
+            txbSucesion.Text = sus3.Substring(0,cant);
 
 
 
 
 
-        }
+        }    //CODIGO METODO Von Neumann
 
     }
 }
