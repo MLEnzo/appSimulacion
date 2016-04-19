@@ -16,6 +16,8 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             txbCant.Visible = false;
+            lblMayorA100.Visible = false;
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,7 +30,7 @@ namespace WindowsFormsApplication1
 
         }
         //agregar cantidad preferencial de numeros aleatorios
-        private void cbxCantidad_CheckedChanged(object sender, EventArgs e) 
+        private void cbxCantidad_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxCantidad.Checked == true)
             {
@@ -42,48 +44,67 @@ namespace WindowsFormsApplication1
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(txbSemilla.Text) >= 101)   //comprueba si es mayor o igua a 101
-            {
 
-                var x0 = Convert.ToInt32(txbSemilla.Text); //inicializa variables
-                int gen;
-                string s = "";
-                string sus = "";
+            long  gen;
+            string s = "";
+            string sus = "";          //inicializa variables
+            string sus3 = "";
 
 
+            var x0 = Convert.ToInt64(txbSemilla.Text);      //asegura que se puede ungresar hasta 19 digitos de numeros 9
 
-
-                gen = x0 * x0;                            //realiza operacion cuadrados
-                int d = (Convert.ToString(gen)).Length;   //obtiene numeros de digitos 
-
-                
-
-                if (d < 8) {                                //comprueba si es mayor a 8 digitos
-                    int j = 8 - d;
-                    for (int i = 0; i < j; i++)           //un for que agrega ceros depende de los digitos
-                    {
-                        s = s + "0";
-                    }
-
-                    sus = s + (Convert.ToString(gen));
-                }
-                int ultdig = (Convert.ToInt32(sus.Length)) - 4;
-                string sus2 = sus.Substring(2, ultdig);
-
-
-
-                //txbSucesion.Text = Convert.ToString(gen); //convierte el resultado a string para mostrar en pantalla
-                txbSucesion.Text = sus + " " + sus2; }
-        
-
-                    else {
-                        txbSucesion.Text = "";         //vacia o no mustra la sucecion si se efectua un error
-                    }//termina else de if(semilla>101)
-
-                } //termina while
             
+            while (sus3.Length <= 50)    //comprueba si es mayor o igua a 101 y empieza bucle
+            {
+                lblMayorA100.Visible = false;
+                if (x0 >= 101)
+                {                                        //comprueba si es mayor o igua a 101 y empieza bucle
+                    gen = x0 * x0;                      //realiza operacion cuadrados
+
+                    var Generado = Convert.ToString(gen);
+                    int d = Generado.Length;   //obtiene numeros de digitos 
+
+
+                    s = "";
+                    if (d < 8)
+                    {                                //comprueba si es mayor a 8 digitos
+                        int j = 8 - d;
+
+                        for (int i = 0; i < j; i++)           //un for que agrega ceros depende de los digitos
+                        {
+                            s = s + "0";
+                        }
+
+                    }
+                    
+                    sus = s + Generado;
+                    int ultdig = (Convert.ToInt32(sus.Length)) - 4;  // obtiene ultimo digito y lo resta por 4
+                    string sus2 = sus.Substring(2, ultdig);          //numeros de posicion para sacar
+                                                                     //los 2 ultimos ceros de la derecha
+                    sus3 = sus3 + sus2;
+
+                    //txbSucesion.Text = Convert.ToString(gen); //convierte el resultado a string para mostrar en pantalla
+                   
+                    x0 = Convert.ToInt64(sus2);
+                }
+                else {
+                    //falta agregar label que indique que no es mayor a 101 la semilla ingresada
+                    lblMayorA100.Visible = true;
+                    break;
+                }
+
             }
+            txbSucesion.Text = sus3;
+
+
+
+
+
         }
+
+    }
+}
+      
 
 
 

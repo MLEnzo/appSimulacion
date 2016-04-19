@@ -33,6 +33,7 @@
             this.rdbFibonacci = new System.Windows.Forms.RadioButton();
             this.rdbCongruencia = new System.Windows.Forms.RadioButton();
             this.pnlVonNeumann = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.txbCant = new System.Windows.Forms.TextBox();
             this.txbSemilla = new System.Windows.Forms.TextBox();
             this.txbSucesion = new System.Windows.Forms.TextBox();
@@ -42,7 +43,7 @@
             this.mktbxSemilla = new System.Windows.Forms.MaskedTextBox();
             this.txbCantidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblMayorA100 = new System.Windows.Forms.Label();
             this.pnlVonNeumann.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +96,7 @@
             // 
             // pnlVonNeumann
             // 
+            this.pnlVonNeumann.Controls.Add(this.lblMayorA100);
             this.pnlVonNeumann.Controls.Add(this.label2);
             this.pnlVonNeumann.Controls.Add(this.txbCant);
             this.pnlVonNeumann.Controls.Add(this.txbSemilla);
@@ -106,6 +108,15 @@
             this.pnlVonNeumann.Name = "pnlVonNeumann";
             this.pnlVonNeumann.Size = new System.Drawing.Size(375, 173);
             this.pnlVonNeumann.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 15);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Sucesion";
             // 
             // txbCant
             // 
@@ -189,14 +200,18 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "label1";
             // 
-            // label2
+            // lblMayorA100
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 15);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Sucesion";
+            this.lblMayorA100.AutoSize = true;
+            this.lblMayorA100.BackColor = System.Drawing.SystemColors.Control;
+            this.lblMayorA100.Font = new System.Drawing.Font("Microsoft YaHei", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMayorA100.ForeColor = System.Drawing.Color.Red;
+            this.lblMayorA100.Location = new System.Drawing.Point(172, 24);
+            this.lblMayorA100.Name = "lblMayorA100";
+            this.lblMayorA100.Size = new System.Drawing.Size(198, 17);
+            this.lblMayorA100.TabIndex = 9;
+            this.lblMayorA100.Text = "Ingrese una semilla mayor a 100";
+            this.lblMayorA100.Visible = false;
             // 
             // Form1
             // 
@@ -236,6 +251,7 @@
         private System.Windows.Forms.TextBox txbSemilla;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblMayorA100;
     }
 }
 
