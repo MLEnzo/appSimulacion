@@ -21,7 +21,15 @@ namespace WindowsFormsApplication1
 
         }
 
-        
+        private void rdbVonNeumann_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbVonNeumann.Checked == true)
+            {
+                pnlVonNeumann.Visible = true;
+
+            }
+            else { pnlVonNeumann.Visible = false; }
+        }  //check de radio boton de von Neumann
         //agregar cantidad preferencial de numeros aleatorios (EN METODO VON NEUMANN)
         private void cbxCantidad_CheckedChanged(object sender, EventArgs e)
         {
@@ -112,6 +120,49 @@ namespace WindowsFormsApplication1
 
         }    //CODIGO METODO Von Neumann
 
+
+
+
+        private void rdbFibonacci_CheckedChanged(object sender, EventArgs e) //check de radio boton de fibonacci
+        {
+            if (rdbFibonacci.Checked == true)
+            {
+                pnlFibonacci.Visible = true;
+
+            }
+            else { pnlFibonacci.Visible = false; }
+
+        }
+
+        private void btnGenerarFibo_Click(object sender, EventArgs e) //CODIGO METODO FIBONACCI
+        {
+
+            int v1, v2, A, n, sumaV, Vx, K;    //declaracion de variables
+
+            v1 = Convert.ToInt32( txbVariable1.Text);      //asicnacion de variables
+            v2 = Convert.ToInt32(txbVariable2.Text);
+            A = Convert.ToInt32(txbNumeroA.Text);
+            n = Convert.ToInt32(txbcantidadFibo);
+
+            txbSucesionFibo.Text = v1+", "+v2;  //muestra por primera ves los 2 primeros numeros aleatorios(ingresados por el usuario)
+
+         //   while(n<=xx) //agregar condicion de bucle
+
+            sumaV = v1 + v2;  //suma variable v1 y v2
+
+
+            if (sumaV <= A)   //determina el valor de K
+            {K = -1;}
+            else { K = 0; }
+
+            Vx = sumaV + (K * A);  //formula generadora de N° aleatorio
+
+            txbSucesionFibo.Text =", "+Vx;   //muestra el resultado
+
+            v1 = v2;    //reasigna las variables
+            v2 = Vx;
+
+        }
     }
 }
       
