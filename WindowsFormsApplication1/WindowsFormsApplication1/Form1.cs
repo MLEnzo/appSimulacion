@@ -26,6 +26,8 @@ namespace WindowsFormsApplication1
             if (rdbVonNeumann.Checked == true)
             {
                 pnlVonNeumann.Visible = true;
+                pnlFibonacci.Visible = false;
+                
 
             }
             else { pnlVonNeumann.Visible = false; }
@@ -51,6 +53,7 @@ namespace WindowsFormsApplication1
             string s = "";
             string sus = "";          //inicializa variables
             string sus3 = "";
+
             int cant;
            
 
@@ -112,7 +115,9 @@ namespace WindowsFormsApplication1
                 }
 
             }
-            txbSucesion.Text = sus3.Substring(0,cant);
+          
+           
+            txbSucesion.Text = sus3.Substring(0, cant);
 
 
 
@@ -128,6 +133,7 @@ namespace WindowsFormsApplication1
             if (rdbFibonacci.Checked == true)
             {
                 pnlFibonacci.Visible = true;
+                pnlVonNeumann.Visible = false;
 
             }
             else { pnlFibonacci.Visible = false; }
@@ -142,25 +148,29 @@ namespace WindowsFormsApplication1
             v1 = Convert.ToInt32( txbVariable1.Text);      //asicnacion de variables
             v2 = Convert.ToInt32(txbVariable2.Text);
             A = Convert.ToInt32(txbNumeroA.Text);
-            n = Convert.ToInt32(txbcantidadFibo);
+            n = Convert.ToInt32(txbcantidadFibo.Text);
 
-            txbSucesionFibo.Text = v1+", "+v2;  //muestra por primera ves los 2 primeros numeros aleatorios(ingresados por el usuario)
+            txbSucesionFibo.Text = txbVariable1.Text + ", "+ txbVariable2.Text;  //muestra por primera ves los 2 primeros numeros aleatorios(ingresados por el usuario)
 
-         //   while(n<=xx) //agregar condicion de bucle
+            for (int i = 1; i <= n; i++)  //for con condicion de bucle
 
-            sumaV = v1 + v2;  //suma variable v1 y v2
+            {
 
 
-            if (sumaV <= A)   //determina el valor de K
-            {K = -1;}
-            else { K = 0; }
+                sumaV = v1 + v2;  //suma variable v1 y v2
 
-            Vx = sumaV + (K * A);  //formula generadora de N° aleatorio
 
-            txbSucesionFibo.Text =", "+Vx;   //muestra el resultado
+                if (sumaV <= A)   //determina el valor de K
+                { K = -1; }
+                else { K = 0; }
 
-            v1 = v2;    //reasigna las variables
-            v2 = Vx;
+                Vx = sumaV + (K * A);  //formula generadora de N° aleatorio
+
+                txbSucesionFibo.Text = txbSucesionFibo.Text + ", " + Vx;   //muestra el resultado
+
+                v1 = v2;    //reasigna las variables
+                v2 = Vx;
+            }
 
         }
     }
