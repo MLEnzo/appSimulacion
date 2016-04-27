@@ -33,6 +33,31 @@
             this.rdbFibonacci = new System.Windows.Forms.RadioButton();
             this.rdbCongruencia = new System.Windows.Forms.RadioButton();
             this.pnlVonNeumann = new System.Windows.Forms.Panel();
+            this.pnlFibonacci = new System.Windows.Forms.Panel();
+            this.lblIngreseV1yV22 = new System.Windows.Forms.Label();
+            this.lblIngreseV1yV2 = new System.Windows.Forms.Label();
+            this.lblCorch2Fibo = new System.Windows.Forms.Label();
+            this.lblComaFibo = new System.Windows.Forms.Label();
+            this.lblCorchFibo = new System.Windows.Forms.Label();
+            this.txbInterb2Fibo = new System.Windows.Forms.TextBox();
+            this.txbInterb1Fibo = new System.Windows.Forms.TextBox();
+            this.cbxIndicarInterbFibo = new System.Windows.Forms.CheckBox();
+            this.btnGenerarFibo = new System.Windows.Forms.Button();
+            this.txbSucesionFibo = new System.Windows.Forms.TextBox();
+            this.lblcantidadFibo = new System.Windows.Forms.Label();
+            this.txbcantidadFibo = new System.Windows.Forms.TextBox();
+            this.txbNumeroA = new System.Windows.Forms.TextBox();
+            this.lblVariable2 = new System.Windows.Forms.Label();
+            this.txbVariable2 = new System.Windows.Forms.TextBox();
+            this.txbVariable1 = new System.Windows.Forms.TextBox();
+            this.lblNumeroA = new System.Windows.Forms.Label();
+            this.lblVariable1 = new System.Windows.Forms.Label();
+            this.lblCorch2 = new System.Windows.Forms.Label();
+            this.lblComa = new System.Windows.Forms.Label();
+            this.lblCorch1 = new System.Windows.Forms.Label();
+            this.txbInter2VN = new System.Windows.Forms.TextBox();
+            this.txbInter1VN = new System.Windows.Forms.TextBox();
+            this.cbxIndicarInterVN = new System.Windows.Forms.CheckBox();
             this.lblMayorA100 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txbCant = new System.Windows.Forms.TextBox();
@@ -44,17 +69,6 @@
             this.mktbxSemilla = new System.Windows.Forms.MaskedTextBox();
             this.txbCantidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlFibonacci = new System.Windows.Forms.Panel();
-            this.btnGenerarFibo = new System.Windows.Forms.Button();
-            this.txbSucesionFibo = new System.Windows.Forms.TextBox();
-            this.lblcantidadFibo = new System.Windows.Forms.Label();
-            this.txbcantidadFibo = new System.Windows.Forms.TextBox();
-            this.txbNumeroA = new System.Windows.Forms.TextBox();
-            this.txbVariable2 = new System.Windows.Forms.TextBox();
-            this.txbVariable1 = new System.Windows.Forms.TextBox();
-            this.lblNumeroA = new System.Windows.Forms.Label();
-            this.lblVariable2 = new System.Windows.Forms.Label();
-            this.lblVariable1 = new System.Windows.Forms.Label();
             this.pnlVonNeumann.SuspendLayout();
             this.pnlFibonacci.SuspendLayout();
             this.SuspendLayout();
@@ -108,7 +122,12 @@
             // 
             // pnlVonNeumann
             // 
-            this.pnlVonNeumann.Controls.Add(this.pnlFibonacci);
+            this.pnlVonNeumann.Controls.Add(this.lblCorch2);
+            this.pnlVonNeumann.Controls.Add(this.lblComa);
+            this.pnlVonNeumann.Controls.Add(this.lblCorch1);
+            this.pnlVonNeumann.Controls.Add(this.txbInter2VN);
+            this.pnlVonNeumann.Controls.Add(this.txbInter1VN);
+            this.pnlVonNeumann.Controls.Add(this.cbxIndicarInterVN);
             this.pnlVonNeumann.Controls.Add(this.lblMayorA100);
             this.pnlVonNeumann.Controls.Add(this.label2);
             this.pnlVonNeumann.Controls.Add(this.txbCant);
@@ -119,118 +138,20 @@
             this.pnlVonNeumann.Controls.Add(this.lblSemilla);
             this.pnlVonNeumann.Location = new System.Drawing.Point(40, 124);
             this.pnlVonNeumann.Name = "pnlVonNeumann";
-            this.pnlVonNeumann.Size = new System.Drawing.Size(375, 173);
+            this.pnlVonNeumann.Size = new System.Drawing.Size(375, 222);
             this.pnlVonNeumann.TabIndex = 4;
             this.pnlVonNeumann.Visible = false;
             // 
-            // lblMayorA100
-            // 
-            this.lblMayorA100.AutoSize = true;
-            this.lblMayorA100.BackColor = System.Drawing.SystemColors.Control;
-            this.lblMayorA100.Font = new System.Drawing.Font("Microsoft YaHei", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMayorA100.ForeColor = System.Drawing.Color.Red;
-            this.lblMayorA100.Location = new System.Drawing.Point(172, 24);
-            this.lblMayorA100.Name = "lblMayorA100";
-            this.lblMayorA100.Size = new System.Drawing.Size(198, 17);
-            this.lblMayorA100.TabIndex = 9;
-            this.lblMayorA100.Text = "Ingrese una semilla mayor a 100";
-            this.lblMayorA100.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 15);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Sucesion";
-            // 
-            // txbCant
-            // 
-            this.txbCant.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCant.Location = new System.Drawing.Point(83, 45);
-            this.txbCant.Name = "txbCant";
-            this.txbCant.Size = new System.Drawing.Size(73, 21);
-            this.txbCant.TabIndex = 7;
-            // 
-            // txbSemilla
-            // 
-            this.txbSemilla.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSemilla.Location = new System.Drawing.Point(83, 21);
-            this.txbSemilla.Name = "txbSemilla";
-            this.txbSemilla.Size = new System.Drawing.Size(73, 21);
-            this.txbSemilla.TabIndex = 6;
-            // 
-            // txbSucesion
-            // 
-            this.txbSucesion.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSucesion.Location = new System.Drawing.Point(83, 73);
-            this.txbSucesion.Margin = new System.Windows.Forms.Padding(4);
-            this.txbSucesion.Multiline = true;
-            this.txbSucesion.Name = "txbSucesion";
-            this.txbSucesion.ReadOnly = true;
-            this.txbSucesion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txbSucesion.Size = new System.Drawing.Size(190, 89);
-            this.txbSucesion.TabIndex = 5;
-            // 
-            // cbxCantidad
-            // 
-            this.cbxCantidad.AutoSize = true;
-            this.cbxCantidad.Location = new System.Drawing.Point(162, 47);
-            this.cbxCantidad.Name = "cbxCantidad";
-            this.cbxCantidad.Size = new System.Drawing.Size(111, 19);
-            this.cbxCantidad.TabIndex = 3;
-            this.cbxCantidad.Text = "Indicar Cantidad";
-            this.cbxCantidad.UseVisualStyleBackColor = true;
-            this.cbxCantidad.CheckedChanged += new System.EventHandler(this.cbxCantidad_CheckedChanged);
-            // 
-            // btnGenerar
-            // 
-            this.btnGenerar.Font = new System.Drawing.Font("Modern No. 20", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerar.Location = new System.Drawing.Point(283, 74);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(87, 65);
-            this.btnGenerar.TabIndex = 2;
-            this.btnGenerar.Text = "Generar";
-            this.btnGenerar.UseVisualStyleBackColor = true;
-            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
-            // 
-            // lblSemilla
-            // 
-            this.lblSemilla.AutoSize = true;
-            this.lblSemilla.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemilla.Location = new System.Drawing.Point(16, 20);
-            this.lblSemilla.Name = "lblSemilla";
-            this.lblSemilla.Size = new System.Drawing.Size(56, 19);
-            this.lblSemilla.TabIndex = 0;
-            this.lblSemilla.Text = "Semilla";
-            // 
-            // mktbxSemilla
-            // 
-            this.mktbxSemilla.Location = new System.Drawing.Point(100, 14);
-            this.mktbxSemilla.Mask = "9999";
-            this.mktbxSemilla.Name = "mktbxSemilla";
-            this.mktbxSemilla.Size = new System.Drawing.Size(41, 20);
-            this.mktbxSemilla.TabIndex = 7;
-            // 
-            // txbCantidad
-            // 
-            this.txbCantidad.Location = new System.Drawing.Point(100, 45);
-            this.txbCantidad.Name = "txbCantidad";
-            this.txbCantidad.Size = new System.Drawing.Size(56, 20);
-            this.txbCantidad.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 15);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "label1";
-            // 
             // pnlFibonacci
             // 
+            this.pnlFibonacci.Controls.Add(this.lblIngreseV1yV22);
+            this.pnlFibonacci.Controls.Add(this.lblIngreseV1yV2);
+            this.pnlFibonacci.Controls.Add(this.lblCorch2Fibo);
+            this.pnlFibonacci.Controls.Add(this.lblComaFibo);
+            this.pnlFibonacci.Controls.Add(this.lblCorchFibo);
+            this.pnlFibonacci.Controls.Add(this.txbInterb2Fibo);
+            this.pnlFibonacci.Controls.Add(this.txbInterb1Fibo);
+            this.pnlFibonacci.Controls.Add(this.cbxIndicarInterbFibo);
             this.pnlFibonacci.Controls.Add(this.btnGenerarFibo);
             this.pnlFibonacci.Controls.Add(this.txbSucesionFibo);
             this.pnlFibonacci.Controls.Add(this.lblcantidadFibo);
@@ -241,14 +162,92 @@
             this.pnlFibonacci.Controls.Add(this.txbVariable1);
             this.pnlFibonacci.Controls.Add(this.lblNumeroA);
             this.pnlFibonacci.Controls.Add(this.lblVariable1);
-            this.pnlFibonacci.Location = new System.Drawing.Point(0, 0);
+            this.pnlFibonacci.Location = new System.Drawing.Point(40, 124);
             this.pnlFibonacci.Name = "pnlFibonacci";
-            this.pnlFibonacci.Size = new System.Drawing.Size(375, 173);
+            this.pnlFibonacci.Size = new System.Drawing.Size(375, 222);
             this.pnlFibonacci.TabIndex = 5;
+            // 
+            // lblIngreseV1yV22
+            // 
+            this.lblIngreseV1yV22.AutoSize = true;
+            this.lblIngreseV1yV22.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngreseV1yV22.ForeColor = System.Drawing.Color.Red;
+            this.lblIngreseV1yV22.Location = new System.Drawing.Point(20, 148);
+            this.lblIngreseV1yV22.Name = "lblIngreseV1yV22";
+            this.lblIngreseV1yV22.Size = new System.Drawing.Size(195, 15);
+            this.lblIngreseV1yV22.TabIndex = 23;
+            this.lblIngreseV1yV22.Text = "Ingrese la variable 1 y la variable 2";
+            this.lblIngreseV1yV22.Visible = false;
+            // 
+            // lblIngreseV1yV2
+            // 
+            this.lblIngreseV1yV2.AutoSize = true;
+            this.lblIngreseV1yV2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngreseV1yV2.ForeColor = System.Drawing.Color.Red;
+            this.lblIngreseV1yV2.Location = new System.Drawing.Point(24, 148);
+            this.lblIngreseV1yV2.Name = "lblIngreseV1yV2";
+            this.lblIngreseV1yV2.Size = new System.Drawing.Size(0, 16);
+            this.lblIngreseV1yV2.TabIndex = 22;
+            this.lblIngreseV1yV2.Visible = false;
+            // 
+            // lblCorch2Fibo
+            // 
+            this.lblCorch2Fibo.AutoSize = true;
+            this.lblCorch2Fibo.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorch2Fibo.Location = new System.Drawing.Point(111, 122);
+            this.lblCorch2Fibo.Name = "lblCorch2Fibo";
+            this.lblCorch2Fibo.Size = new System.Drawing.Size(10, 15);
+            this.lblCorch2Fibo.TabIndex = 21;
+            this.lblCorch2Fibo.Text = "]";
+            // 
+            // lblComaFibo
+            // 
+            this.lblComaFibo.AutoSize = true;
+            this.lblComaFibo.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComaFibo.Location = new System.Drawing.Point(78, 122);
+            this.lblComaFibo.Name = "lblComaFibo";
+            this.lblComaFibo.Size = new System.Drawing.Size(10, 15);
+            this.lblComaFibo.TabIndex = 20;
+            this.lblComaFibo.Text = ",";
+            // 
+            // lblCorchFibo
+            // 
+            this.lblCorchFibo.AutoSize = true;
+            this.lblCorchFibo.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorchFibo.Location = new System.Drawing.Point(40, 123);
+            this.lblCorchFibo.Name = "lblCorchFibo";
+            this.lblCorchFibo.Size = new System.Drawing.Size(10, 15);
+            this.lblCorchFibo.TabIndex = 19;
+            this.lblCorchFibo.Text = "[";
+            // 
+            // txbInterb2Fibo
+            // 
+            this.txbInterb2Fibo.Location = new System.Drawing.Point(84, 120);
+            this.txbInterb2Fibo.Name = "txbInterb2Fibo";
+            this.txbInterb2Fibo.Size = new System.Drawing.Size(21, 20);
+            this.txbInterb2Fibo.TabIndex = 18;
+            // 
+            // txbInterb1Fibo
+            // 
+            this.txbInterb1Fibo.Location = new System.Drawing.Point(56, 121);
+            this.txbInterb1Fibo.Name = "txbInterb1Fibo";
+            this.txbInterb1Fibo.Size = new System.Drawing.Size(22, 20);
+            this.txbInterb1Fibo.TabIndex = 17;
+            // 
+            // cbxIndicarInterbFibo
+            // 
+            this.cbxIndicarInterbFibo.AutoSize = true;
+            this.cbxIndicarInterbFibo.Location = new System.Drawing.Point(135, 121);
+            this.cbxIndicarInterbFibo.Name = "cbxIndicarInterbFibo";
+            this.cbxIndicarInterbFibo.Size = new System.Drawing.Size(115, 19);
+            this.cbxIndicarInterbFibo.TabIndex = 16;
+            this.cbxIndicarInterbFibo.Text = "Indicar Interbalo ";
+            this.cbxIndicarInterbFibo.UseVisualStyleBackColor = true;
+            this.cbxIndicarInterbFibo.CheckedChanged += new System.EventHandler(this.cbxIndicarInterbFibo_CheckedChanged);
             // 
             // btnGenerarFibo
             // 
-            this.btnGenerarFibo.Location = new System.Drawing.Point(110, 119);
+            this.btnGenerarFibo.Location = new System.Drawing.Point(111, 170);
             this.btnGenerarFibo.Name = "btnGenerarFibo";
             this.btnGenerarFibo.Size = new System.Drawing.Size(100, 36);
             this.btnGenerarFibo.TabIndex = 9;
@@ -291,6 +290,15 @@
             this.txbNumeroA.Size = new System.Drawing.Size(53, 21);
             this.txbNumeroA.TabIndex = 5;
             // 
+            // lblVariable2
+            // 
+            this.lblVariable2.AutoSize = true;
+            this.lblVariable2.Location = new System.Drawing.Point(7, 30);
+            this.lblVariable2.Name = "lblVariable2";
+            this.lblVariable2.Size = new System.Drawing.Size(58, 15);
+            this.lblVariable2.TabIndex = 1;
+            this.lblVariable2.Text = "Ingrese V2";
+            // 
             // txbVariable2
             // 
             this.txbVariable2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -316,15 +324,6 @@
             this.lblNumeroA.TabIndex = 2;
             this.lblNumeroA.Text = "Ingrese A";
             // 
-            // lblVariable2
-            // 
-            this.lblVariable2.AutoSize = true;
-            this.lblVariable2.Location = new System.Drawing.Point(7, 30);
-            this.lblVariable2.Name = "lblVariable2";
-            this.lblVariable2.Size = new System.Drawing.Size(58, 15);
-            this.lblVariable2.TabIndex = 1;
-            this.lblVariable2.Text = "Ingrese V2";
-            // 
             // lblVariable1
             // 
             this.lblVariable1.AutoSize = true;
@@ -335,11 +334,173 @@
             this.lblVariable1.Text = "Ingrese V1";
             this.lblVariable1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // lblCorch2
+            // 
+            this.lblCorch2.AutoSize = true;
+            this.lblCorch2.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorch2.Location = new System.Drawing.Point(138, 74);
+            this.lblCorch2.Name = "lblCorch2";
+            this.lblCorch2.Size = new System.Drawing.Size(10, 15);
+            this.lblCorch2.TabIndex = 15;
+            this.lblCorch2.Text = "]";
+            // 
+            // lblComa
+            // 
+            this.lblComa.AutoSize = true;
+            this.lblComa.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComa.Location = new System.Drawing.Point(105, 74);
+            this.lblComa.Name = "lblComa";
+            this.lblComa.Size = new System.Drawing.Size(10, 15);
+            this.lblComa.TabIndex = 14;
+            this.lblComa.Text = ",";
+            // 
+            // lblCorch1
+            // 
+            this.lblCorch1.AutoSize = true;
+            this.lblCorch1.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorch1.Location = new System.Drawing.Point(67, 75);
+            this.lblCorch1.Name = "lblCorch1";
+            this.lblCorch1.Size = new System.Drawing.Size(10, 15);
+            this.lblCorch1.TabIndex = 13;
+            this.lblCorch1.Text = "[";
+            // 
+            // txbInter2VN
+            // 
+            this.txbInter2VN.Location = new System.Drawing.Point(111, 72);
+            this.txbInter2VN.Name = "txbInter2VN";
+            this.txbInter2VN.Size = new System.Drawing.Size(21, 20);
+            this.txbInter2VN.TabIndex = 12;
+            // 
+            // txbInter1VN
+            // 
+            this.txbInter1VN.Location = new System.Drawing.Point(83, 73);
+            this.txbInter1VN.Name = "txbInter1VN";
+            this.txbInter1VN.Size = new System.Drawing.Size(22, 20);
+            this.txbInter1VN.TabIndex = 11;
+            // 
+            // cbxIndicarInterVN
+            // 
+            this.cbxIndicarInterVN.AutoSize = true;
+            this.cbxIndicarInterVN.Location = new System.Drawing.Point(162, 73);
+            this.cbxIndicarInterVN.Name = "cbxIndicarInterVN";
+            this.cbxIndicarInterVN.Size = new System.Drawing.Size(115, 19);
+            this.cbxIndicarInterVN.TabIndex = 10;
+            this.cbxIndicarInterVN.Text = "Indicar Interbalo ";
+            this.cbxIndicarInterVN.UseVisualStyleBackColor = true;
+            this.cbxIndicarInterVN.CheckedChanged += new System.EventHandler(this.cbxIndicarInterVN_CheckedChanged);
+            // 
+            // lblMayorA100
+            // 
+            this.lblMayorA100.AutoSize = true;
+            this.lblMayorA100.BackColor = System.Drawing.SystemColors.Control;
+            this.lblMayorA100.Font = new System.Drawing.Font("Microsoft YaHei", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMayorA100.ForeColor = System.Drawing.Color.Red;
+            this.lblMayorA100.Location = new System.Drawing.Point(172, 24);
+            this.lblMayorA100.Name = "lblMayorA100";
+            this.lblMayorA100.Size = new System.Drawing.Size(198, 17);
+            this.lblMayorA100.TabIndex = 9;
+            this.lblMayorA100.Text = "Ingrese una semilla mayor a 100";
+            this.lblMayorA100.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 15);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Sucesion";
+            // 
+            // txbCant
+            // 
+            this.txbCant.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCant.Location = new System.Drawing.Point(83, 45);
+            this.txbCant.Name = "txbCant";
+            this.txbCant.Size = new System.Drawing.Size(73, 21);
+            this.txbCant.TabIndex = 7;
+            // 
+            // txbSemilla
+            // 
+            this.txbSemilla.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSemilla.Location = new System.Drawing.Point(83, 21);
+            this.txbSemilla.Name = "txbSemilla";
+            this.txbSemilla.Size = new System.Drawing.Size(73, 21);
+            this.txbSemilla.TabIndex = 6;
+            // 
+            // txbSucesion
+            // 
+            this.txbSucesion.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSucesion.Location = new System.Drawing.Point(83, 117);
+            this.txbSucesion.Margin = new System.Windows.Forms.Padding(4);
+            this.txbSucesion.Multiline = true;
+            this.txbSucesion.Name = "txbSucesion";
+            this.txbSucesion.ReadOnly = true;
+            this.txbSucesion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txbSucesion.Size = new System.Drawing.Size(190, 89);
+            this.txbSucesion.TabIndex = 5;
+            // 
+            // cbxCantidad
+            // 
+            this.cbxCantidad.AutoSize = true;
+            this.cbxCantidad.Location = new System.Drawing.Point(162, 47);
+            this.cbxCantidad.Name = "cbxCantidad";
+            this.cbxCantidad.Size = new System.Drawing.Size(111, 19);
+            this.cbxCantidad.TabIndex = 3;
+            this.cbxCantidad.Text = "Indicar Cantidad";
+            this.cbxCantidad.UseVisualStyleBackColor = true;
+            this.cbxCantidad.CheckedChanged += new System.EventHandler(this.cbxCantidad_CheckedChanged);
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Font = new System.Drawing.Font("Modern No. 20", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerar.Location = new System.Drawing.Point(280, 91);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(87, 65);
+            this.btnGenerar.TabIndex = 2;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // lblSemilla
+            // 
+            this.lblSemilla.AutoSize = true;
+            this.lblSemilla.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSemilla.Location = new System.Drawing.Point(16, 20);
+            this.lblSemilla.Name = "lblSemilla";
+            this.lblSemilla.Size = new System.Drawing.Size(56, 19);
+            this.lblSemilla.TabIndex = 0;
+            this.lblSemilla.Text = "Semilla";
+            // 
+            // mktbxSemilla
+            // 
+            this.mktbxSemilla.Location = new System.Drawing.Point(100, 14);
+            this.mktbxSemilla.Mask = "9999";
+            this.mktbxSemilla.Name = "mktbxSemilla";
+            this.mktbxSemilla.Size = new System.Drawing.Size(41, 20);
+            this.mktbxSemilla.TabIndex = 7;
+            // 
+            // txbCantidad
+            // 
+            this.txbCantidad.Location = new System.Drawing.Point(100, 45);
+            this.txbCantidad.Name = "txbCantidad";
+            this.txbCantidad.Size = new System.Drawing.Size(56, 20);
+            this.txbCantidad.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 309);
+            this.ClientSize = new System.Drawing.Size(438, 369);
+            this.Controls.Add(this.pnlFibonacci);
             this.Controls.Add(this.pnlVonNeumann);
             this.Controls.Add(this.rdbCongruencia);
             this.Controls.Add(this.rdbFibonacci);
@@ -387,6 +548,20 @@
         private System.Windows.Forms.TextBox txbVariable1;
         private System.Windows.Forms.Label lblNumeroA;
         private System.Windows.Forms.Label lblVariable2;
+        private System.Windows.Forms.Label lblCorch2;
+        private System.Windows.Forms.Label lblComa;
+        private System.Windows.Forms.Label lblCorch1;
+        private System.Windows.Forms.TextBox txbInter2VN;
+        private System.Windows.Forms.TextBox txbInter1VN;
+        private System.Windows.Forms.CheckBox cbxIndicarInterVN;
+        private System.Windows.Forms.Label lblCorch2Fibo;
+        private System.Windows.Forms.Label lblComaFibo;
+        private System.Windows.Forms.Label lblCorchFibo;
+        private System.Windows.Forms.TextBox txbInterb2Fibo;
+        private System.Windows.Forms.TextBox txbInterb1Fibo;
+        private System.Windows.Forms.CheckBox cbxIndicarInterbFibo;
+        private System.Windows.Forms.Label lblIngreseV1yV2;
+        private System.Windows.Forms.Label lblIngreseV1yV22;
     }
 }
 
