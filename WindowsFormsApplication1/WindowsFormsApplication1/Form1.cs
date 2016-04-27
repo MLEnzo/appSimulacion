@@ -53,6 +53,7 @@ namespace WindowsFormsApplication1
             string s = "";
             string sus = "";          //inicializa variables
             string sus3 = "";
+            string sus4 = "";
 
             int cant;
            
@@ -115,8 +116,14 @@ namespace WindowsFormsApplication1
                 }
 
             }
-          
-           
+
+            for (int i = 0; i <= sus3.Length; i++)
+            {
+                for (int j = 1; j < sus3.Length; j++)
+                {
+                    //agregar codigo para separar sucecion
+                }
+            }
             txbSucesion.Text = sus3.Substring(0, cant);
 
 
@@ -175,7 +182,12 @@ namespace WindowsFormsApplication1
         }
     }
 }
-      
+      //generar interbalo  [a,b]   agregar codigo   [R1*(b-a)]+a
+      /*  ejemplo: [0,7]
+       *    susecion= 8, 0 , 3 etc...
+       *    
+       *    [8*(7-0)]+0 = 56  == se muestra "5, 6" , 0, 3 etc...
+       */
 
 
 
