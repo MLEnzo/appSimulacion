@@ -271,9 +271,19 @@ namespace WindowsFormsApplication1
             else                                                       
             {
 
-                if (n == 0)                                         //condiciona si el n ingresado es igual a cero muestra los primeros numeros ingresados
+                if (n <= ind )                                         //condiciona si el n ingresado es igual a cero muestra los primeros numeros ingresados
                 {
-                    txbcantidadFibo.Text = sus3;
+                    int j=1;
+                    for (int i = 0; j <= n+i; i+=3)
+                    {
+                        j = j + 1;
+                        if (i >= (sus3.Length)) { break; } else {
+                            txbSucesionFibo.Text = sus3.Substring(0, i+1); }    ///reparar Erorrrrrrrr
+                    }
+                    
+                    
+                    
+
                 }
                 else                                               //ejecuta el siguiente codigo si no se cumplen las demas condiciones
                 {
