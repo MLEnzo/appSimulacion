@@ -259,7 +259,7 @@ namespace WindowsFormsApplication1
                 sus3 = sus3 + (txbVariable2.Text.Substring(i, 1)) + ", ";
             }
 
-            sus3 = sus3 + (txbVariable2.Text.Substring((txbVariable1.TextLength), 1));
+            sus3 = sus3 + (txbVariable2.Text.Substring((txbVariable1.TextLength)-1, 1));
 
 
             if (v1 == 0)                                                  
@@ -320,7 +320,7 @@ namespace WindowsFormsApplication1
                         sus2 = sus2 + sus5.Substring((n - 1), 1);
                     }
 
-                    txbSucesionFibo.Text = sus3 + sus2; //muestra la sucesion final obtenida
+                    txbSucesionFibo.Text = sus3 +", "+ sus2; //muestra la sucesion final obtenida
                 }
 
 
@@ -337,5 +337,7 @@ namespace WindowsFormsApplication1
        *    [8*(7-0)]+0 = 56  == se muestra "5, 6" , 0, 3 etc...
        */
 
+
+    //falta agregar condicion cuando n sea menor o igual que la cantidad de elementos ingresados por el usuario que ingresa
 
 
