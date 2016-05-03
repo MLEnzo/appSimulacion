@@ -13,6 +13,6 @@ D:\Enzo\FACULTAD\Simulacion\appSimulacion\WindowsFormsApplication1\WindowsFormsA
 D:\Enzo\FACULTAD\Simulacion\appSimulacion\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 D:\Enzo\FACULTAD\Simulacion\appSimulacion\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 D:\Enzo\FACULTAD\Simulacion\appSimulacion\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
-D:\Enzo\FACULTAD\Simulacion\appSimulacion\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 D:\Enzo\FACULTAD\Simulacion\appSimulacion\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 D:\Enzo\FACULTAD\Simulacion\appSimulacion\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\Enzo\FACULTAD\Simulacion\appSimulacion\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.appGeneradores.resources

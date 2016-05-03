@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class appGeneradores : Form
     {
-        public Form1()
+        public appGeneradores()
         {
             InitializeComponent();
             txbCant.Visible = false;
@@ -405,6 +405,16 @@ namespace WindowsFormsApplication1
                 }
                 
 
+            }
+        }
+
+        private void rdbCongruencia_CheckedChanged(object sender, EventArgs e) //check radio boton de Congruencias
+        {
+            if (rdbCongruencia.Checked == true)
+            {
+                rdbCongruenciaAditivo.Visible = true;
+                rdbCongruenciaMultiplicativo.Visible = true;
+                rdbCongruenciaMixto.Visible = true;
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form1
+    partial class appGeneradores
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -69,6 +69,10 @@
             this.mktbxSemilla = new System.Windows.Forms.MaskedTextBox();
             this.txbCantidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.rdbCongruenciaAditivo = new System.Windows.Forms.RadioButton();
+            this.rdbCongruenciaMultiplicativo = new System.Windows.Forms.RadioButton();
+            this.rdbCongruenciaMixto = new System.Windows.Forms.RadioButton();
+            this.pnlAditivo = new System.Windows.Forms.Panel();
             this.pnlVonNeumann.SuspendLayout();
             this.pnlFibonacci.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +123,7 @@
             this.rdbCongruencia.TabStop = true;
             this.rdbCongruencia.Text = "Congruencia";
             this.rdbCongruencia.UseVisualStyleBackColor = true;
+            this.rdbCongruencia.CheckedChanged += new System.EventHandler(this.rdbCongruencia_CheckedChanged);
             // 
             // pnlVonNeumann
             // 
@@ -495,11 +500,59 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "label1";
             // 
-            // Form1
+            // rdbCongruenciaAditivo
+            // 
+            this.rdbCongruenciaAditivo.AutoSize = true;
+            this.rdbCongruenciaAditivo.Location = new System.Drawing.Point(52, 88);
+            this.rdbCongruenciaAditivo.Name = "rdbCongruenciaAditivo";
+            this.rdbCongruenciaAditivo.Size = new System.Drawing.Size(61, 19);
+            this.rdbCongruenciaAditivo.TabIndex = 6;
+            this.rdbCongruenciaAditivo.TabStop = true;
+            this.rdbCongruenciaAditivo.Text = "Aditivo";
+            this.rdbCongruenciaAditivo.UseVisualStyleBackColor = true;
+            this.rdbCongruenciaAditivo.Visible = false;
+            // 
+            // rdbCongruenciaMultiplicativo
+            // 
+            this.rdbCongruenciaMultiplicativo.AutoSize = true;
+            this.rdbCongruenciaMultiplicativo.Location = new System.Drawing.Point(202, 89);
+            this.rdbCongruenciaMultiplicativo.Name = "rdbCongruenciaMultiplicativo";
+            this.rdbCongruenciaMultiplicativo.Size = new System.Drawing.Size(96, 19);
+            this.rdbCongruenciaMultiplicativo.TabIndex = 7;
+            this.rdbCongruenciaMultiplicativo.TabStop = true;
+            this.rdbCongruenciaMultiplicativo.Text = "Multiplicativo";
+            this.rdbCongruenciaMultiplicativo.UseVisualStyleBackColor = true;
+            this.rdbCongruenciaMultiplicativo.Visible = false;
+            // 
+            // rdbCongruenciaMixto
+            // 
+            this.rdbCongruenciaMixto.AutoSize = true;
+            this.rdbCongruenciaMixto.Location = new System.Drawing.Point(355, 89);
+            this.rdbCongruenciaMixto.Name = "rdbCongruenciaMixto";
+            this.rdbCongruenciaMixto.Size = new System.Drawing.Size(54, 19);
+            this.rdbCongruenciaMixto.TabIndex = 8;
+            this.rdbCongruenciaMixto.TabStop = true;
+            this.rdbCongruenciaMixto.Text = "Mixto";
+            this.rdbCongruenciaMixto.UseVisualStyleBackColor = true;
+            this.rdbCongruenciaMixto.Visible = false;
+            // 
+            // pnlAditivo
+            // 
+            this.pnlAditivo.Location = new System.Drawing.Point(12, 122);
+            this.pnlAditivo.Name = "pnlAditivo";
+            this.pnlAditivo.Size = new System.Drawing.Size(501, 320);
+            this.pnlAditivo.TabIndex = 9;
+            this.pnlAditivo.Visible = false;
+            // 
+            // appGeneradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 454);
+            this.Controls.Add(this.pnlAditivo);
+            this.Controls.Add(this.rdbCongruenciaMixto);
+            this.Controls.Add(this.rdbCongruenciaMultiplicativo);
+            this.Controls.Add(this.rdbCongruenciaAditivo);
             this.Controls.Add(this.pnlFibonacci);
             this.Controls.Add(this.pnlVonNeumann);
             this.Controls.Add(this.rdbCongruencia);
@@ -507,7 +560,7 @@
             this.Controls.Add(this.rdbVonNeumann);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Modern No. 20", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Form1";
+            this.Name = "appGeneradores";
             this.Text = "AppGeneradores";
             this.pnlVonNeumann.ResumeLayout(false);
             this.pnlVonNeumann.PerformLayout();
@@ -562,6 +615,10 @@
         private System.Windows.Forms.CheckBox cbxIndicarInterbFibo;
         private System.Windows.Forms.Label lblIngreseV1yV2;
         private System.Windows.Forms.Label lblIngreseV1yV22;
+        private System.Windows.Forms.RadioButton rdbCongruenciaAditivo;
+        private System.Windows.Forms.RadioButton rdbCongruenciaMultiplicativo;
+        private System.Windows.Forms.RadioButton rdbCongruenciaMixto;
+        private System.Windows.Forms.Panel pnlAditivo;
     }
 }
 
