@@ -19,6 +19,25 @@ namespace WindowsFormsApplication1
             lblMayorA100.Visible = false;
             txbCant.Text = "0";
             lblIngreseV1yV22.Visible = false;
+            //intervalo VM
+            cbxIndicarInterVN.Checked = false;
+            lblCorch1.Visible = false;
+            txbInter1VN.Visible = false;
+            lblComa.Visible = false;
+            txbInter2VN.Visible = false;
+            lblCorch2.Visible = false;
+            txbInter1VN.Text = "0";
+            txbInter2VN.Text = "9";
+            //intervalo Fibo
+            cbxIndicarInterbFibo.Checked = false;
+            lblCorchFibo.Visible = false;
+            txbInterb1Fibo.Visible = false;
+            lblComaFibo.Visible = false;
+            txbInterb2Fibo.Visible = false;
+            lblCorch2Fibo.Visible = false;
+            txbInterb1Fibo.Text = "0";
+            txbInterb2Fibo.Text = "9";
+
         }
 
         private void rdbVonNeumann_CheckedChanged(object sender, EventArgs e)
@@ -144,13 +163,17 @@ namespace WindowsFormsApplication1
 
             }
 
-
-            for (int i = 0; i < cant; i++)                      //for que genera suscesion por un intebalo
+            if (cbxIndicarInterVN.Checked==true)
             {
-                int r = Convert.ToInt32(sus3.Substring(i, 1));
-                int R1 = (r * (b - a)) + a;
-                su = su + Convert.ToString(R1);
+                for (int i = 0; i < cant; i++)                      //for que genera suscesion por un intebalo
+                {
+                    int r = Convert.ToInt32(sus3.Substring(i, 1));
+                    int R1 = (r * (b - a)) + a;
+                    su = su + Convert.ToString(R1);
+                }
             }
+            else { su = sus3; }    
+            
 
 
             for (int i = 0; i < cant - 1; i++)               //for que separa los numeros aleatorios de la sucesion
@@ -169,7 +192,7 @@ namespace WindowsFormsApplication1
         }    //CODIGO METODO Von Neumann
 
 
-        
+
 
         private void rdbFibonacci_CheckedChanged(object sender, EventArgs e) //check de radio boton de fibonacci
         {
@@ -212,7 +235,10 @@ namespace WindowsFormsApplication1
         {
             txbSucesionFibo.Text = "";
             int v1, v2, A, n, sumaV, Vx, K;    //declaracion de variables
-                                               //asignacion de variables
+            bool m;
+
+
+            //asignacion de variables
             if (txbVariable1.Text == "")
             {
                 v1 = 0;
@@ -234,7 +260,7 @@ namespace WindowsFormsApplication1
             }
             else { n = Convert.ToInt32(txbcantidadFibo.Text); }
 
-            
+
             string sus = "";
             string sus2 = "";
             string sus3 = "";
@@ -248,96 +274,139 @@ namespace WindowsFormsApplication1
             int a = Convert.ToInt32(txbInterb1Fibo.Text);
             int b = Convert.ToInt32(txbInterb2Fibo.Text);
 
-            
 
-            for (int i = 0; i < (txbVariable1.TextLength); i++)                                           //separa los 2 primeros numeros aleatorios(ingresados por el usuario)
+
+
+
+
+            if (v1 == 0)
             {
-                sus3 = sus3 + (txbVariable1.Text.Substring(i, 1)) + ", ";
-            }
-            for (int i = 0; i < (txbVariable2.TextLength)-1; i++)
-            {
-                sus3 = sus3 + (txbVariable2.Text.Substring(i, 1)) + ", ";
-            }
-
-            sus3 = sus3 + (txbVariable2.Text.Substring((txbVariable1.TextLength)-1, 1));
-
-
-            if (v1 == 0)                                                  
-            {
-                if (v2 == 0) { lblIngreseV1yV22.Visible = true ; }     //condiciona si la variable 1 y 2 es cero aparezca un mensaje de Error
+                if (v2 == 0) { lblIngreseV1yV22.Visible = true; }     //condiciona si la variable 1 y 2 es cero aparezca un mensaje de Error
 
 
             }
-            else                                                       
+            else
             {
-
-                if (n <= ind )                                         //condiciona si el n ingresado es igual a cero muestra los primeros numeros ingresados
+                if (n == 0)
                 {
-                    int j=1;
-                    for (int i = 0; j <= n+i; i+=3)
+
+                    for (int i = 0; i < (txbVariable1.TextLength); i++)                                           //condiciona si el n ingresado es igual a cero muestra los 2 primeros numeros aleatorios(ingresados por el usuario)
                     {
-                        j = j + 1;
-                        if (i >= (sus3.Length)) { break; } else {
-                            txbSucesionFibo.Text = sus3.Substring(0, i+1); }    ///reparar Erorrrrrrrr
+                        sus3 = sus3 + (txbVariable1.Text.Substring(i, 1)) + ", ";
                     }
-                    
-                    
-                    
+                    for (int i = 0; i < (txbVariable2.TextLength) - 1; i++)
+                    {
+                        sus3 = sus3 + (txbVariable2.Text.Substring(i, 1)) + ", ";
+                    }
+
+                    sus3 = sus3 + (txbVariable2.Text.Substring((txbVariable1.TextLength) - 1, 1));
+                    txbSucesionFibo.Text = sus3;
 
                 }
-                else                                               //ejecuta el siguiente codigo si no se cumplen las demas condiciones
+                else
                 {
-                    for (int i = 1; i <= n; i++)  //for con codigo principal de fibo
-
+                    if (n == ind)                                         //condiciona si el n ingresado es igual muestra los primeros numeros ingresados
                     {
 
+                        for (int i = 0; i < n - 1; i++)
+                        {
+                            sus3 = sus3 + sus4.Substring(i, 1) + ", ";
+                        }
+                        sus3 = sus3 + sus4.Substring(n - 1, 1);
+                        txbSucesionFibo.Text = sus3;
 
-                        sumaV = v1 + v2;  //suma variable v1 y v2
-
-
-                        if (sumaV <= A)   //determina el valor de K
-                        { K = 0; }
-                        else { K = -1; }
-
-                        Vx = sumaV + (K * A);  //formula generadora de N° aleatorio
-
-                        sus = sus + Convert.ToString(Vx);   //muestra el resultado
-
-                        v1 = v2;    //reasigna las variables
-                        v2 = Vx;
-                    }
-
-                    sus4 = sus4 + sus;
-                    for (int i = 0; i < (n - 1); i++)                      //for que genera suscesion por un intebalo
-                    {
-                        int r = Convert.ToInt32(sus4.Substring(i, 1));
-                        int R1 = (r * (b - a)) + a;
-                        sus5 = sus5 + Convert.ToString(R1);
-                    }
-
-
-                    if (((n) - ind) == 1)                                   //condicion para agregar un unico elemento a la suscesion 
-                    {
-                        sus2 = sus2 + sus5.Substring(((n - ind) - 1), 1);
                     }
                     else
                     {
 
-                        for (int i = 0; i < ((n) - ind) - 1; i++)               //for que separa los numeros aleatorios de la sucesion
+                        if (n < ind)                                         //condiciona si el n ingresado es igual a cero muestra los primeros numeros ingresados
                         {
-                            sus2 = sus2 + sus5.Substring(i, 1) + ", ";
+
+                            for (int i = 0; i < n - 1; i++)
+                            {
+                                sus3 = sus3 + sus4.Substring(i, 1) + ", ";
+                            }
+                            sus3 = sus3 + sus4.Substring(n - 1, 1);
+                            txbSucesionFibo.Text = sus3;
+
+
                         }
-                        sus2 = sus2 + sus5.Substring((n - 1), 1);
+                        else                                               //ejecuta el siguiente codigo si no se cumplen las demas condiciones
+                        {
+                            for (int i = 0; i < (txbVariable1.TextLength); i++)                                           //separa los 2 primeros numeros aleatorios(ingresados por el usuario)
+                            {
+                                sus3 = sus3 + (txbVariable1.Text.Substring(i, 1)) + ", ";
+                            }
+                            for (int i = 0; i < (txbVariable2.TextLength) - 1; i++)
+                            {
+                                sus3 = sus3 + (txbVariable2.Text.Substring(i, 1)) + ", ";
+                            }
+
+                            sus3 = sus3 + (txbVariable2.Text.Substring((txbVariable1.TextLength) - 1, 1));
+
+
+                            m = true;
+                            for (int i = 1; m; i++)  //for con codigo principal de fibo
+
+                            {
+
+                                sumaV = v1 + v2;  //suma variable v1 y v2
+
+
+                                if (sumaV <= A)   //determina el valor de K
+                                { K = 0; }
+                                else { K = -1; }
+
+                                Vx = sumaV + (K * A);  //formula generadora de N° aleatorio
+
+                                sus = sus + Convert.ToString(Vx);   //muestra el resultado
+
+                                v1 = v2;    //reasigna las variables
+                                v2 = Vx;
+
+                                if ((sus4 + sus).Length > n) { m = false; }
+                            }
+
+                            sus4 = sus4 + sus;
+                            if (cbxIndicarInterbFibo.Checked == true)
+                            {
+                                for (int i = 0; i < (n - 1); i++)                      //for que genera suscesion por un intebalo
+                                {
+                                    int r = Convert.ToInt32(sus4.Substring(i, 1));
+                                    int R1 = (r * (b - a)) + a;
+                                    sus5 = sus5 + Convert.ToString(R1);
+                                }
+
+                            }
+                            else { sus5 = sus; }
+
+
+
+                            if (((n) - ind) == 1)                                   //condicion para agregar un unico elemento a la suscesion 
+                            {
+                                sus2 = sus2 + sus5.Substring(((n - ind) - 1), 1);
+                            }
+                            else
+                            {
+
+                                for (int i = 0; i < ((n) - ind) - 1; i++)               //for que separa los numeros aleatorios de la sucesion
+                                {
+                                    sus2 = sus2 + sus5.Substring(i, 1) + ", ";
+                                }
+                                sus2 = sus2 + sus5.Substring((((n) - ind) - 1), 1);
+                            }
+
+                            txbSucesionFibo.Text = sus3 + ", " + sus2; //muestra la sucesion final obtenida
+                        }
+
+                        
                     }
-
-                    txbSucesionFibo.Text = sus3 +", "+ sus2; //muestra la sucesion final obtenida
+                   
                 }
-
+                
 
             }
         }
-
-        
     }
 }
       //generar interbalo  [a,b]   agregar codigo   [R1*(b-a)]+a
