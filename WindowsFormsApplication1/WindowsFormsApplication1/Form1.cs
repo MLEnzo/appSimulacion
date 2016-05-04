@@ -46,12 +46,16 @@ namespace WindowsFormsApplication1
             {
                 pnlVonNeumann.Visible = true;
                 pnlFibonacci.Visible = false;
+                pnlAditivo.Visible = false;
+                rdbCongruenciaAditivo.Visible = false;
+                rdbCongruenciaMultiplicativo.Visible = false;
+                rdbCongruenciaMixto.Visible = false;
 
 
             }
             else { pnlVonNeumann.Visible = false; }
         }  //check de radio boton de von Neumann
-        //agregar cantidad preferencial de numeros aleatorios (EN METODO VON NEUMANN)
+        
         private void cbxCantidad_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxCantidad.Checked == true)
@@ -64,7 +68,7 @@ namespace WindowsFormsApplication1
                 txbCant.Visible = false;
 
             }
-        }
+        }//agregar cantidad preferencial de numeros aleatorios (EN METODO VON NEUMANN)
 
         private void cbxIndicarInterVN_CheckedChanged(object sender, EventArgs e)
         {
@@ -200,6 +204,10 @@ namespace WindowsFormsApplication1
             {
                 pnlFibonacci.Visible = true;
                 pnlVonNeumann.Visible = false;
+                pnlAditivo.Visible = false;
+                rdbCongruenciaAditivo.Visible = false;
+                rdbCongruenciaMultiplicativo.Visible = false;
+                rdbCongruenciaMixto.Visible = false;
 
             }
             else { pnlFibonacci.Visible = false; }
@@ -300,6 +308,7 @@ namespace WindowsFormsApplication1
                     }
 
                     sus3 = sus3 + (txbVariable2.Text.Substring((txbVariable1.TextLength) - 1, 1));
+                    //agegar condicion de intervalo en N=0
                     txbSucesionFibo.Text = sus3;
 
                 }
@@ -307,13 +316,27 @@ namespace WindowsFormsApplication1
                 {
                     if (n == ind)                                         //condiciona si el n ingresado es igual muestra los primeros numeros ingresados
                     {
+                        if (cbxIndicarInterbFibo.Checked == true)
+                        {
+                            for (int i = 0; i < (n - 1); i++)                      //for que genera suscesion por un intebalo
+                            {
+                                int r = Convert.ToInt32(sus4.Substring(i, 1));
+                                int R1 = (r * (b - a)) + a;
+                                sus5 = sus5 + Convert.ToString(R1);
+                            }
+
+                        }
+                        else { sus5 = sus4; }
 
                         for (int i = 0; i < n - 1; i++)
                         {
-                            sus3 = sus3 + sus4.Substring(i, 1) + ", ";
+                            sus3 = sus3 + sus5.Substring(i, 1) + ", ";
                         }
                         sus3 = sus3 + sus4.Substring(n - 1, 1);
+
+                       
                         txbSucesionFibo.Text = sus3;
+                        
 
                     }
                     else
@@ -321,29 +344,49 @@ namespace WindowsFormsApplication1
 
                         if (n < ind)                                         //condiciona si el n ingresado es igual a cero muestra los primeros numeros ingresados
                         {
+                            if (cbxIndicarInterbFibo.Checked == true)
+                            {
+                                for (int i = 0; i < (n - 1); i++)                      //for que genera suscesion por un intebalo
+                                {
+                                    int r = Convert.ToInt32(sus4.Substring(i, 1));
+                                    int R1 = (r * (b - a)) + a;
+                                    sus5 = sus5 + Convert.ToString(R1);
+                                }
+
+                            }
+                            else { sus5 = sus4; }
 
                             for (int i = 0; i < n - 1; i++)
                             {
-                                sus3 = sus3 + sus4.Substring(i, 1) + ", ";
+                                sus3 = sus3 + sus5.Substring(i, 1) + ", ";
                             }
                             sus3 = sus3 + sus4.Substring(n - 1, 1);
+
+                           
                             txbSucesionFibo.Text = sus3;
 
 
                         }
                         else                                               //ejecuta el siguiente codigo si no se cumplen las demas condiciones
                         {
-                            for (int i = 0; i < (txbVariable1.TextLength); i++)                                           //separa los 2 primeros numeros aleatorios(ingresados por el usuario)
+                            if (cbxIndicarInterbFibo.Checked == true)
                             {
-                                sus3 = sus3 + (txbVariable1.Text.Substring(i, 1)) + ", ";
+                                for (int i = 0; i < (n - 1); i++)                      //for que genera suscesion por un intebalo
+                                {
+                                    int r = Convert.ToInt32(sus4.Substring(i, 1));
+                                    int R1 = (r * (b - a)) + a;
+                                    sus5 = sus5 + Convert.ToString(R1);
+                                }
+
                             }
-                            for (int i = 0; i < (txbVariable2.TextLength) - 1; i++)
+                            else { sus5 = sus4; }
+
+                            for (int i = 0; i < (sus5.Length-1); i++)
                             {
-                                sus3 = sus3 + (txbVariable2.Text.Substring(i, 1)) + ", ";
+                                sus3 = sus3 + sus5.Substring(i, 1) + ", ";
                             }
-
-                            sus3 = sus3 + (txbVariable2.Text.Substring((txbVariable1.TextLength) - 1, 1));
-
+                            sus3 = sus3 + sus5.Substring((sus5.Length - 1), 1);
+                        
 
                             m = true;
                             for (int i = 1; m; i++)  //for con codigo principal de fibo
@@ -408,6 +451,8 @@ namespace WindowsFormsApplication1
             }
         }
 
+
+
         private void rdbCongruencia_CheckedChanged(object sender, EventArgs e) //check radio boton de Congruencias
         {
             if (rdbCongruencia.Checked == true)
@@ -419,14 +464,14 @@ namespace WindowsFormsApplication1
         }
     }
 }
-      //generar interbalo  [a,b]   agregar codigo   [R1*(b-a)]+a
-      /*  ejemplo: [0,7]
-       *    susecion= 8, 0 , 3 etc...
-       *    
-       *    [8*(7-0)]+0 = 56  == se muestra "5, 6" , 0, 3 etc...
-       */
+//generar interbalo  [a,b]   agregar codigo   [R1*(b-a)]+a
+/*  ejemplo: [0,7]
+ *    susecion= 8, 0 , 3 etc...
+ *    
+ *    [8*(7-0)]+0 = 56  == se muestra "5, 6" , 0, 3 etc...
+ */
 
 
-    //falta agregar condicion cuando n sea menor o igual que la cantidad de elementos ingresados por el usuario que ingresa
-
-
+//falta agregar seguridad de solo ingreso numeros en Von Neuman y Fibo 
+//agegar condicion de intervalo en N=0
+//error en generar interalo de n= a vacio
