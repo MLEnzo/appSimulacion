@@ -572,5 +572,5 @@ namespace WindowsFormsApplication1
  */
 
 
-//falta agregar seguridad de solo ingreso numeros en Von Neuman y Fibo 
+//falta agregar seguridad de solo ingreso numeros en Von Neuman y Fibo y Congruencias
 //falta agregar congruencia aditiva y mixta
