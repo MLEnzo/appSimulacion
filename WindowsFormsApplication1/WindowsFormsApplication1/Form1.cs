@@ -573,5 +573,4 @@ namespace WindowsFormsApplication1
 
 
 //falta agregar seguridad de solo ingreso numeros en Von Neuman y Fibo 
-//agegar condicion de intervalo en N=0
-//error en generar interalo de n= a vacio
+//falta agregar congruencia aditiva y mixta
