@@ -491,10 +491,9 @@ namespace WindowsFormsApplication1
             int a = Convert.ToInt32(txbIngreseAcg.Text);
             int m = Convert.ToInt32(txbIngreseMcg.Text);
             int n = 10;
-            int V = 0;
-            string V1 = "";string sus = "";
-            int b = 0;
-            int cant = 0;
+            int V=0, cant=0, b = 0;
+            string V1="", sus="", sus1 = ""; 
+          
 
 
             for (int i = 0; i <= n; i++)
@@ -531,8 +530,14 @@ namespace WindowsFormsApplication1
             }
             else { sus = V1; }
 
+            cant = sus.Length;
+            for (int i = 0; i < cant - 1; i++)
+            {
+                sus1 = sus1 + sus.Substring(i, 1) + ", ";
+            }
+            sus1 = sus1 + sus.Substring(cant - 1, 1);
 
-          txbSucesionMulti.Text = sus;          //muestra la sucesion obtenida
+            txbSucesionMulti.Text = sus1;          //muestra la sucesion obtenida
 
         }
 

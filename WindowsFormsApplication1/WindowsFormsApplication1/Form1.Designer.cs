@@ -577,9 +577,9 @@
             // btnGenerarMultiplicativo
             // 
             this.btnGenerarMultiplicativo.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarMultiplicativo.Location = new System.Drawing.Point(159, 243);
+            this.btnGenerarMultiplicativo.Location = new System.Drawing.Point(159, 250);
             this.btnGenerarMultiplicativo.Name = "btnGenerarMultiplicativo";
-            this.btnGenerarMultiplicativo.Size = new System.Drawing.Size(146, 50);
+            this.btnGenerarMultiplicativo.Size = new System.Drawing.Size(170, 57);
             this.btnGenerarMultiplicativo.TabIndex = 0;
             this.btnGenerarMultiplicativo.Text = "Generar";
             this.btnGenerarMultiplicativo.UseVisualStyleBackColor = true;
@@ -642,17 +642,17 @@
             // txbSucesionMulti
             // 
             this.txbSucesionMulti.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSucesionMulti.Location = new System.Drawing.Point(264, 31);
+            this.txbSucesionMulti.Location = new System.Drawing.Point(253, 18);
             this.txbSucesionMulti.Multiline = true;
             this.txbSucesionMulti.Name = "txbSucesionMulti";
-            this.txbSucesionMulti.Size = new System.Drawing.Size(222, 196);
+            this.txbSucesionMulti.Size = new System.Drawing.Size(233, 196);
             this.txbSucesionMulti.TabIndex = 7;
             // 
             // lblCorch2Multi
             // 
             this.lblCorch2Multi.AutoSize = true;
             this.lblCorch2Multi.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorch2Multi.Location = new System.Drawing.Point(105, 200);
+            this.lblCorch2Multi.Location = new System.Drawing.Point(92, 209);
             this.lblCorch2Multi.Name = "lblCorch2Multi";
             this.lblCorch2Multi.Size = new System.Drawing.Size(10, 15);
             this.lblCorch2Multi.TabIndex = 27;
@@ -662,7 +662,7 @@
             // 
             this.lblComaMulti.AutoSize = true;
             this.lblComaMulti.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComaMulti.Location = new System.Drawing.Point(72, 200);
+            this.lblComaMulti.Location = new System.Drawing.Point(59, 209);
             this.lblComaMulti.Name = "lblComaMulti";
             this.lblComaMulti.Size = new System.Drawing.Size(10, 15);
             this.lblComaMulti.TabIndex = 26;
@@ -672,7 +672,7 @@
             // 
             this.lblCorch1Multi.AutoSize = true;
             this.lblCorch1Multi.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorch1Multi.Location = new System.Drawing.Point(34, 201);
+            this.lblCorch1Multi.Location = new System.Drawing.Point(21, 210);
             this.lblCorch1Multi.Name = "lblCorch1Multi";
             this.lblCorch1Multi.Size = new System.Drawing.Size(10, 15);
             this.lblCorch1Multi.TabIndex = 25;
@@ -680,14 +680,16 @@
             // 
             // txbInterBmulti
             // 
-            this.txbInterBmulti.Location = new System.Drawing.Point(78, 198);
+            this.txbInterBmulti.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbInterBmulti.Location = new System.Drawing.Point(65, 207);
             this.txbInterBmulti.Name = "txbInterBmulti";
             this.txbInterBmulti.Size = new System.Drawing.Size(21, 20);
             this.txbInterBmulti.TabIndex = 24;
             // 
             // txbInterAmulti
             // 
-            this.txbInterAmulti.Location = new System.Drawing.Point(50, 199);
+            this.txbInterAmulti.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbInterAmulti.Location = new System.Drawing.Point(37, 208);
             this.txbInterAmulti.Name = "txbInterAmulti";
             this.txbInterAmulti.Size = new System.Drawing.Size(22, 20);
             this.txbInterAmulti.TabIndex = 23;
@@ -695,9 +697,10 @@
             // cxbInterbMulti
             // 
             this.cxbInterbMulti.AutoSize = true;
-            this.cxbInterbMulti.Location = new System.Drawing.Point(129, 199);
+            this.cxbInterbMulti.Font = new System.Drawing.Font("Arial", 8.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cxbInterbMulti.Location = new System.Drawing.Point(116, 208);
             this.cxbInterbMulti.Name = "cxbInterbMulti";
-            this.cxbInterbMulti.Size = new System.Drawing.Size(115, 19);
+            this.cxbInterbMulti.Size = new System.Drawing.Size(117, 19);
             this.cxbInterbMulti.TabIndex = 22;
             this.cxbInterbMulti.Text = "Indicar Interbalo ";
             this.cxbInterbMulti.UseVisualStyleBackColor = true;
