@@ -411,6 +411,8 @@ namespace WindowsFormsApplication1
                             }
 
                             sus4 = sus4 + sus;
+
+
                             if (cbxIndicarInterbFibo.Checked == true)
                             {
                                 for (int i = 0; i < (n - 1); i++)                      //for que genera suscesion por un intebalo
@@ -462,6 +464,8 @@ namespace WindowsFormsApplication1
                 rdbCongruenciaMixto.Visible = true;
             }
         }
+
+       
     }
 }
 //generar interbalo  [a,b]   agregar codigo   [R1*(b-a)]+a

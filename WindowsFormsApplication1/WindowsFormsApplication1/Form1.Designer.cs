@@ -538,7 +538,7 @@
             // 
             // pnlAditivo
             // 
-            this.pnlAditivo.Location = new System.Drawing.Point(12, 122);
+            this.pnlAditivo.Location = new System.Drawing.Point(504, 158);
             this.pnlAditivo.Name = "pnlAditivo";
             this.pnlAditivo.Size = new System.Drawing.Size(501, 320);
             this.pnlAditivo.TabIndex = 9;
