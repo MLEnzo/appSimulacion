@@ -72,9 +72,24 @@
             this.rdbCongruenciaAditivo = new System.Windows.Forms.RadioButton();
             this.rdbCongruenciaMultiplicativo = new System.Windows.Forms.RadioButton();
             this.rdbCongruenciaMixto = new System.Windows.Forms.RadioButton();
-            this.pnlAditivo = new System.Windows.Forms.Panel();
+            this.pnlMultiplicativo = new System.Windows.Forms.Panel();
+            this.btnGenerarMultiplicativo = new System.Windows.Forms.Button();
+            this.txbSemillaMulti = new System.Windows.Forms.TextBox();
+            this.txbIngreseAcg = new System.Windows.Forms.TextBox();
+            this.txbIngreseMcg = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txbSucesionMulti = new System.Windows.Forms.TextBox();
+            this.lblCorch2Multi = new System.Windows.Forms.Label();
+            this.lblComaMulti = new System.Windows.Forms.Label();
+            this.lblCorch1Multi = new System.Windows.Forms.Label();
+            this.txbInterBmulti = new System.Windows.Forms.TextBox();
+            this.txbInterAmulti = new System.Windows.Forms.TextBox();
+            this.cxbInterbMulti = new System.Windows.Forms.CheckBox();
             this.pnlVonNeumann.SuspendLayout();
             this.pnlFibonacci.SuspendLayout();
+            this.pnlMultiplicativo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -523,6 +538,7 @@
             this.rdbCongruenciaMultiplicativo.Text = "Multiplicativo";
             this.rdbCongruenciaMultiplicativo.UseVisualStyleBackColor = true;
             this.rdbCongruenciaMultiplicativo.Visible = false;
+            this.rdbCongruenciaMultiplicativo.CheckedChanged += new System.EventHandler(this.rdbCongruenciaMultiplicativo_CheckedChanged);
             // 
             // rdbCongruenciaMixto
             // 
@@ -536,20 +552,163 @@
             this.rdbCongruenciaMixto.UseVisualStyleBackColor = true;
             this.rdbCongruenciaMixto.Visible = false;
             // 
-            // pnlAditivo
+            // pnlMultiplicativo
             // 
-            this.pnlAditivo.Location = new System.Drawing.Point(504, 158);
-            this.pnlAditivo.Name = "pnlAditivo";
-            this.pnlAditivo.Size = new System.Drawing.Size(501, 320);
-            this.pnlAditivo.TabIndex = 9;
-            this.pnlAditivo.Visible = false;
+            this.pnlMultiplicativo.Controls.Add(this.lblCorch2Multi);
+            this.pnlMultiplicativo.Controls.Add(this.lblComaMulti);
+            this.pnlMultiplicativo.Controls.Add(this.lblCorch1Multi);
+            this.pnlMultiplicativo.Controls.Add(this.txbInterBmulti);
+            this.pnlMultiplicativo.Controls.Add(this.txbInterAmulti);
+            this.pnlMultiplicativo.Controls.Add(this.cxbInterbMulti);
+            this.pnlMultiplicativo.Controls.Add(this.txbSucesionMulti);
+            this.pnlMultiplicativo.Controls.Add(this.label5);
+            this.pnlMultiplicativo.Controls.Add(this.label4);
+            this.pnlMultiplicativo.Controls.Add(this.label3);
+            this.pnlMultiplicativo.Controls.Add(this.txbIngreseMcg);
+            this.pnlMultiplicativo.Controls.Add(this.txbIngreseAcg);
+            this.pnlMultiplicativo.Controls.Add(this.txbSemillaMulti);
+            this.pnlMultiplicativo.Controls.Add(this.btnGenerarMultiplicativo);
+            this.pnlMultiplicativo.Location = new System.Drawing.Point(12, 122);
+            this.pnlMultiplicativo.Name = "pnlMultiplicativo";
+            this.pnlMultiplicativo.Size = new System.Drawing.Size(513, 320);
+            this.pnlMultiplicativo.TabIndex = 9;
+            this.pnlMultiplicativo.Visible = false;
+            // 
+            // btnGenerarMultiplicativo
+            // 
+            this.btnGenerarMultiplicativo.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarMultiplicativo.Location = new System.Drawing.Point(159, 243);
+            this.btnGenerarMultiplicativo.Name = "btnGenerarMultiplicativo";
+            this.btnGenerarMultiplicativo.Size = new System.Drawing.Size(146, 50);
+            this.btnGenerarMultiplicativo.TabIndex = 0;
+            this.btnGenerarMultiplicativo.Text = "Generar";
+            this.btnGenerarMultiplicativo.UseVisualStyleBackColor = true;
+            this.btnGenerarMultiplicativo.Click += new System.EventHandler(this.btnGenerarMultiplicativo_Click);
+            // 
+            // txbSemillaMulti
+            // 
+            this.txbSemillaMulti.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSemillaMulti.Location = new System.Drawing.Point(116, 30);
+            this.txbSemillaMulti.Name = "txbSemillaMulti";
+            this.txbSemillaMulti.Size = new System.Drawing.Size(100, 21);
+            this.txbSemillaMulti.TabIndex = 1;
+            // 
+            // txbIngreseAcg
+            // 
+            this.txbIngreseAcg.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIngreseAcg.Location = new System.Drawing.Point(116, 77);
+            this.txbIngreseAcg.Name = "txbIngreseAcg";
+            this.txbIngreseAcg.Size = new System.Drawing.Size(100, 21);
+            this.txbIngreseAcg.TabIndex = 2;
+            // 
+            // txbIngreseMcg
+            // 
+            this.txbIngreseMcg.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIngreseMcg.Location = new System.Drawing.Point(116, 126);
+            this.txbIngreseMcg.Name = "txbIngreseMcg";
+            this.txbIngreseMcg.Size = new System.Drawing.Size(100, 21);
+            this.txbIngreseMcg.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(4, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Ingrese la Semilla";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(52, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 15);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Ingrese a";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(48, 130);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 15);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "ingrese m";
+            // 
+            // txbSucesionMulti
+            // 
+            this.txbSucesionMulti.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSucesionMulti.Location = new System.Drawing.Point(264, 31);
+            this.txbSucesionMulti.Multiline = true;
+            this.txbSucesionMulti.Name = "txbSucesionMulti";
+            this.txbSucesionMulti.Size = new System.Drawing.Size(222, 196);
+            this.txbSucesionMulti.TabIndex = 7;
+            // 
+            // lblCorch2Multi
+            // 
+            this.lblCorch2Multi.AutoSize = true;
+            this.lblCorch2Multi.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorch2Multi.Location = new System.Drawing.Point(105, 200);
+            this.lblCorch2Multi.Name = "lblCorch2Multi";
+            this.lblCorch2Multi.Size = new System.Drawing.Size(10, 15);
+            this.lblCorch2Multi.TabIndex = 27;
+            this.lblCorch2Multi.Text = "]";
+            // 
+            // lblComaMulti
+            // 
+            this.lblComaMulti.AutoSize = true;
+            this.lblComaMulti.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComaMulti.Location = new System.Drawing.Point(72, 200);
+            this.lblComaMulti.Name = "lblComaMulti";
+            this.lblComaMulti.Size = new System.Drawing.Size(10, 15);
+            this.lblComaMulti.TabIndex = 26;
+            this.lblComaMulti.Text = ",";
+            // 
+            // lblCorch1Multi
+            // 
+            this.lblCorch1Multi.AutoSize = true;
+            this.lblCorch1Multi.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorch1Multi.Location = new System.Drawing.Point(34, 201);
+            this.lblCorch1Multi.Name = "lblCorch1Multi";
+            this.lblCorch1Multi.Size = new System.Drawing.Size(10, 15);
+            this.lblCorch1Multi.TabIndex = 25;
+            this.lblCorch1Multi.Text = "[";
+            // 
+            // txbInterBmulti
+            // 
+            this.txbInterBmulti.Location = new System.Drawing.Point(78, 198);
+            this.txbInterBmulti.Name = "txbInterBmulti";
+            this.txbInterBmulti.Size = new System.Drawing.Size(21, 20);
+            this.txbInterBmulti.TabIndex = 24;
+            // 
+            // txbInterAmulti
+            // 
+            this.txbInterAmulti.Location = new System.Drawing.Point(50, 199);
+            this.txbInterAmulti.Name = "txbInterAmulti";
+            this.txbInterAmulti.Size = new System.Drawing.Size(22, 20);
+            this.txbInterAmulti.TabIndex = 23;
+            // 
+            // cxbInterbMulti
+            // 
+            this.cxbInterbMulti.AutoSize = true;
+            this.cxbInterbMulti.Location = new System.Drawing.Point(129, 199);
+            this.cxbInterbMulti.Name = "cxbInterbMulti";
+            this.cxbInterbMulti.Size = new System.Drawing.Size(115, 19);
+            this.cxbInterbMulti.TabIndex = 22;
+            this.cxbInterbMulti.Text = "Indicar Interbalo ";
+            this.cxbInterbMulti.UseVisualStyleBackColor = true;
+            this.cxbInterbMulti.CheckedChanged += new System.EventHandler(this.cxbInterbMulti_CheckedChanged);
             // 
             // appGeneradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 454);
-            this.Controls.Add(this.pnlAditivo);
+            this.Controls.Add(this.pnlMultiplicativo);
             this.Controls.Add(this.rdbCongruenciaMixto);
             this.Controls.Add(this.rdbCongruenciaMultiplicativo);
             this.Controls.Add(this.rdbCongruenciaAditivo);
@@ -566,6 +725,8 @@
             this.pnlVonNeumann.PerformLayout();
             this.pnlFibonacci.ResumeLayout(false);
             this.pnlFibonacci.PerformLayout();
+            this.pnlMultiplicativo.ResumeLayout(false);
+            this.pnlMultiplicativo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -618,7 +779,21 @@
         private System.Windows.Forms.RadioButton rdbCongruenciaAditivo;
         private System.Windows.Forms.RadioButton rdbCongruenciaMultiplicativo;
         private System.Windows.Forms.RadioButton rdbCongruenciaMixto;
-        private System.Windows.Forms.Panel pnlAditivo;
+        private System.Windows.Forms.Panel pnlMultiplicativo;
+        private System.Windows.Forms.Button btnGenerarMultiplicativo;
+        private System.Windows.Forms.TextBox txbSucesionMulti;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txbIngreseMcg;
+        private System.Windows.Forms.TextBox txbIngreseAcg;
+        private System.Windows.Forms.TextBox txbSemillaMulti;
+        private System.Windows.Forms.Label lblCorch2Multi;
+        private System.Windows.Forms.Label lblComaMulti;
+        private System.Windows.Forms.Label lblCorch1Multi;
+        private System.Windows.Forms.TextBox txbInterBmulti;
+        private System.Windows.Forms.TextBox txbInterAmulti;
+        private System.Windows.Forms.CheckBox cxbInterbMulti;
     }
 }
 

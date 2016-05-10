@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1
             {
                 pnlVonNeumann.Visible = true;
                 pnlFibonacci.Visible = false;
-                pnlAditivo.Visible = false;
+                pnlMultiplicativo.Visible = false;
                 rdbCongruenciaAditivo.Visible = false;
                 rdbCongruenciaMultiplicativo.Visible = false;
                 rdbCongruenciaMixto.Visible = false;
@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1
             }
             else { pnlVonNeumann.Visible = false; }
         }  //check de radio boton de von Neumann
-        
+
         private void cbxCantidad_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxCantidad.Checked == true)
@@ -167,7 +167,7 @@ namespace WindowsFormsApplication1
 
             }
 
-            if (cbxIndicarInterVN.Checked==true)
+            if (cbxIndicarInterVN.Checked == true)
             {
                 for (int i = 0; i < cant; i++)                      //for que genera suscesion por un intebalo
                 {
@@ -176,8 +176,8 @@ namespace WindowsFormsApplication1
                     su = su + Convert.ToString(R1);
                 }
             }
-            else { su = sus3; }    
-            
+            else { su = sus3; }
+
 
 
             for (int i = 0; i < cant - 1; i++)               //for que separa los numeros aleatorios de la sucesion
@@ -204,7 +204,7 @@ namespace WindowsFormsApplication1
             {
                 pnlFibonacci.Visible = true;
                 pnlVonNeumann.Visible = false;
-                pnlAditivo.Visible = false;
+                pnlMultiplicativo.Visible = false;
                 rdbCongruenciaAditivo.Visible = false;
                 rdbCongruenciaMultiplicativo.Visible = false;
                 rdbCongruenciaMixto.Visible = false;
@@ -334,9 +334,9 @@ namespace WindowsFormsApplication1
                         }
                         sus3 = sus3 + sus4.Substring(n - 1, 1);
 
-                       
+
                         txbSucesionFibo.Text = sus3;
-                        
+
 
                     }
                     else
@@ -362,7 +362,7 @@ namespace WindowsFormsApplication1
                             }
                             sus3 = sus3 + sus4.Substring(n - 1, 1);
 
-                           
+
                             txbSucesionFibo.Text = sus3;
 
 
@@ -381,12 +381,12 @@ namespace WindowsFormsApplication1
                             }
                             else { sus5 = sus4; }
 
-                            for (int i = 0; i < (sus5.Length-1); i++)
+                            for (int i = 0; i < (sus5.Length - 1); i++)
                             {
                                 sus3 = sus3 + sus5.Substring(i, 1) + ", ";
                             }
                             sus3 = sus3 + sus5.Substring((sus5.Length - 1), 1);
-                        
+
 
                             m = true;
                             for (int i = 1; m; i++)  //for con codigo principal de fibo
@@ -444,14 +444,16 @@ namespace WindowsFormsApplication1
                             txbSucesionFibo.Text = sus3 + ", " + sus2; //muestra la sucesion final obtenida
                         }
 
-                        
+
                     }
-                   
+
                 }
-                
+
 
             }
         }
+
+
 
 
 
@@ -465,7 +467,54 @@ namespace WindowsFormsApplication1
             }
         }
 
-       
+        private void rdbCongruenciaMultiplicativo_CheckedChanged(object sender, EventArgs e)//check radio boton Multiplicativo
+        {
+            if (rdbCongruenciaMultiplicativo.Checked == true)
+            {
+                pnlFibonacci.Visible = false;
+                pnlVonNeumann.Visible = false;
+                pnlMultiplicativo.Visible = true;
+
+            }
+        }
+
+        private void btnGenerarMultiplicativo_Click(object sender, EventArgs e) //codigo Congruencias Metodo Multiplicativo
+        {
+            int sem = Convert.ToInt32(txbSemillaMulti.Text);
+            int a = Convert.ToInt32(txbIngreseAcg.Text);
+            int m = Convert.ToInt32(txbIngreseMcg.Text);
+            int n = 10;
+            int V = 0;
+            string V1 = "";
+            int b = 0;
+
+            for (int i = 0; i <= n; i++)
+            {
+                if (i == 0)
+                {
+                    V1 = V1 + sem;                    //calculo del modulo cuando se obtiene por primera vez la sucesion
+                    b = (a * sem);
+                    V = b %= m;
+                }
+
+                else
+                {
+                    b = (a * V);           //calculo del modulo cuando ya se obtuvo una sucesion
+                    V = b %= m;
+                }
+
+                V1 = V1 + V;
+
+                
+            }
+            txbSucesionMulti.Text = V1;
+
+        }
+
+        private void cxbInterbMulti_CheckedChanged(object sender, EventArgs e) //checkboxs de interbalo Metodo Multiplicativo
+        {
+
+        }
     }
 }
 //generar interbalo  [a,b]   agregar codigo   [R1*(b-a)]+a
