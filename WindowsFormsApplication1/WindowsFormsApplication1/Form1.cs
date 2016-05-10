@@ -492,8 +492,10 @@ namespace WindowsFormsApplication1
             int m = Convert.ToInt32(txbIngreseMcg.Text);
             int n = 10;
             int V = 0;
-            string V1 = "";
+            string V1 = "";string sus = "";
             int b = 0;
+            int cant = 0;
+
 
             for (int i = 0; i <= n; i++)
             {
@@ -514,7 +516,23 @@ namespace WindowsFormsApplication1
 
                 
             }
-            txbSucesionMulti.Text = V1;
+            cant = V1.Length;           //asigna a cant la cantidad de elementos que hay en la sucecion
+            if (cxbInterbMulti.Checked == true)                  //if que condiciona si se realiza el intervalo o no
+            {
+                a = Convert.ToInt32(txbInterAmulti.Text);
+                b = Convert.ToInt32(txbInterBmulti.Text);
+
+                for (int i = 0; i < cant; i++)                      //for que genera suscesion por un intebalo
+                {
+                    int r = Convert.ToInt32(V1.Substring(i, 1));
+                    int R1 = (r * (b - a)) + a;
+                    sus = sus + Convert.ToString(R1);
+                }
+            }
+            else { sus = V1; }
+
+
+          txbSucesionMulti.Text = sus;          //muestra la sucesion obtenida
 
         }
 
