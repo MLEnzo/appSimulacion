@@ -474,6 +474,13 @@ namespace WindowsFormsApplication1
                 pnlFibonacci.Visible = false;
                 pnlVonNeumann.Visible = false;
                 pnlMultiplicativo.Visible = true;
+                lblCorch1Multi.Visible = false;
+                txbInterAmulti.Visible = false;
+                lblComaMulti.Visible = false;
+                txbInterBmulti.Visible = false;
+                lblCorch2Multi.Visible = false;
+                txbInterAmulti.Text = "0";
+                txbInterBmulti.Text = "9";
 
             }
         }
@@ -513,7 +520,24 @@ namespace WindowsFormsApplication1
 
         private void cxbInterbMulti_CheckedChanged(object sender, EventArgs e) //checkboxs de interbalo Metodo Multiplicativo
         {
+            if (cxbInterbMulti.Checked == true)
+            {
+                lblCorch1Multi.Visible = true;
+                txbInterAmulti.Visible = true;
+                lblComaMulti.Visible = true;
+                txbInterBmulti.Visible = true;
+                lblCorch2Multi.Visible = true;
+            }
+            else {
+                lblCorch1Multi.Visible = false;
+                txbInterAmulti.Visible = false;
+                lblComaMulti.Visible = false;
+                txbInterBmulti.Visible = false;
+                lblCorch2Multi.Visible = false;
+                txbInterAmulti.Text = "0";
+                txbInterBmulti.Text = "9";
 
+            }
         }
     }
 }
