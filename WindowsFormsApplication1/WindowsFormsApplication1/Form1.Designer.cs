@@ -73,23 +73,36 @@
             this.rdbCongruenciaMultiplicativo = new System.Windows.Forms.RadioButton();
             this.rdbCongruenciaMixto = new System.Windows.Forms.RadioButton();
             this.pnlMultiplicativo = new System.Windows.Forms.Panel();
-            this.btnGenerarMultiplicativo = new System.Windows.Forms.Button();
-            this.txbSemillaMulti = new System.Windows.Forms.TextBox();
-            this.txbIngreseAcg = new System.Windows.Forms.TextBox();
-            this.txbIngreseMcg = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txbSucesionMulti = new System.Windows.Forms.TextBox();
             this.lblCorch2Multi = new System.Windows.Forms.Label();
             this.lblComaMulti = new System.Windows.Forms.Label();
             this.lblCorch1Multi = new System.Windows.Forms.Label();
             this.txbInterBmulti = new System.Windows.Forms.TextBox();
             this.txbInterAmulti = new System.Windows.Forms.TextBox();
             this.cxbInterbMulti = new System.Windows.Forms.CheckBox();
+            this.txbSucesionMulti = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txbIngreseMcg = new System.Windows.Forms.TextBox();
+            this.txbIngreseAcg = new System.Windows.Forms.TextBox();
+            this.txbSemillaMulti = new System.Windows.Forms.TextBox();
+            this.btnGenerarMultiplicativo = new System.Windows.Forms.Button();
+            this.pnlAditivo = new System.Windows.Forms.Panel();
+            this.btnGenerarAditivo = new System.Windows.Forms.Button();
+            this.txbAditivoIngrK = new System.Windows.Forms.TextBox();
+            this.txbAditivoIngrM = new System.Windows.Forms.TextBox();
+            this.txbAditivoIngrN = new System.Windows.Forms.TextBox();
+            this.lblAditivoIngrK = new System.Windows.Forms.Label();
+            this.lblAditivoIngrM = new System.Windows.Forms.Label();
+            this.lblAditivoIngrN = new System.Windows.Forms.Label();
+            this.lblAditivoIngrSemilla = new System.Windows.Forms.Label();
+            this.txbAditivoIngrSemilla = new System.Windows.Forms.TextBox();
+            this.txbAditivoSusecion = new System.Windows.Forms.TextBox();
+            this.lblAditivoIngrNewSemilla = new System.Windows.Forms.Label();
             this.pnlVonNeumann.SuspendLayout();
             this.pnlFibonacci.SuspendLayout();
             this.pnlMultiplicativo.SuspendLayout();
+            this.pnlAditivo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -526,6 +539,7 @@
             this.rdbCongruenciaAditivo.Text = "Aditivo";
             this.rdbCongruenciaAditivo.UseVisualStyleBackColor = true;
             this.rdbCongruenciaAditivo.Visible = false;
+            this.rdbCongruenciaAditivo.CheckedChanged += new System.EventHandler(this.rdbCongruenciaAditivo_CheckedChanged);
             // 
             // rdbCongruenciaMultiplicativo
             // 
@@ -573,80 +587,6 @@
             this.pnlMultiplicativo.Size = new System.Drawing.Size(513, 320);
             this.pnlMultiplicativo.TabIndex = 9;
             this.pnlMultiplicativo.Visible = false;
-            // 
-            // btnGenerarMultiplicativo
-            // 
-            this.btnGenerarMultiplicativo.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarMultiplicativo.Location = new System.Drawing.Point(159, 250);
-            this.btnGenerarMultiplicativo.Name = "btnGenerarMultiplicativo";
-            this.btnGenerarMultiplicativo.Size = new System.Drawing.Size(170, 57);
-            this.btnGenerarMultiplicativo.TabIndex = 0;
-            this.btnGenerarMultiplicativo.Text = "Generar";
-            this.btnGenerarMultiplicativo.UseVisualStyleBackColor = true;
-            this.btnGenerarMultiplicativo.Click += new System.EventHandler(this.btnGenerarMultiplicativo_Click);
-            // 
-            // txbSemillaMulti
-            // 
-            this.txbSemillaMulti.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSemillaMulti.Location = new System.Drawing.Point(116, 30);
-            this.txbSemillaMulti.Name = "txbSemillaMulti";
-            this.txbSemillaMulti.Size = new System.Drawing.Size(100, 21);
-            this.txbSemillaMulti.TabIndex = 1;
-            // 
-            // txbIngreseAcg
-            // 
-            this.txbIngreseAcg.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIngreseAcg.Location = new System.Drawing.Point(116, 77);
-            this.txbIngreseAcg.Name = "txbIngreseAcg";
-            this.txbIngreseAcg.Size = new System.Drawing.Size(100, 21);
-            this.txbIngreseAcg.TabIndex = 2;
-            // 
-            // txbIngreseMcg
-            // 
-            this.txbIngreseMcg.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIngreseMcg.Location = new System.Drawing.Point(116, 126);
-            this.txbIngreseMcg.Name = "txbIngreseMcg";
-            this.txbIngreseMcg.Size = new System.Drawing.Size(100, 21);
-            this.txbIngreseMcg.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Ingrese la Semilla";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 15);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Ingrese a";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(48, 130);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 15);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "ingrese m";
-            // 
-            // txbSucesionMulti
-            // 
-            this.txbSucesionMulti.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSucesionMulti.Location = new System.Drawing.Point(253, 18);
-            this.txbSucesionMulti.Multiline = true;
-            this.txbSucesionMulti.Name = "txbSucesionMulti";
-            this.txbSucesionMulti.Size = new System.Drawing.Size(233, 196);
-            this.txbSucesionMulti.TabIndex = 7;
             // 
             // lblCorch2Multi
             // 
@@ -706,11 +646,201 @@
             this.cxbInterbMulti.UseVisualStyleBackColor = true;
             this.cxbInterbMulti.CheckedChanged += new System.EventHandler(this.cxbInterbMulti_CheckedChanged);
             // 
+            // txbSucesionMulti
+            // 
+            this.txbSucesionMulti.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSucesionMulti.Location = new System.Drawing.Point(253, 18);
+            this.txbSucesionMulti.Multiline = true;
+            this.txbSucesionMulti.Name = "txbSucesionMulti";
+            this.txbSucesionMulti.Size = new System.Drawing.Size(233, 196);
+            this.txbSucesionMulti.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(48, 130);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 15);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "ingrese m";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(52, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 15);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Ingrese a";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(4, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Ingrese la Semilla";
+            // 
+            // txbIngreseMcg
+            // 
+            this.txbIngreseMcg.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIngreseMcg.Location = new System.Drawing.Point(116, 126);
+            this.txbIngreseMcg.Name = "txbIngreseMcg";
+            this.txbIngreseMcg.Size = new System.Drawing.Size(100, 21);
+            this.txbIngreseMcg.TabIndex = 3;
+            // 
+            // txbIngreseAcg
+            // 
+            this.txbIngreseAcg.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIngreseAcg.Location = new System.Drawing.Point(116, 77);
+            this.txbIngreseAcg.Name = "txbIngreseAcg";
+            this.txbIngreseAcg.Size = new System.Drawing.Size(100, 21);
+            this.txbIngreseAcg.TabIndex = 2;
+            // 
+            // txbSemillaMulti
+            // 
+            this.txbSemillaMulti.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSemillaMulti.Location = new System.Drawing.Point(116, 30);
+            this.txbSemillaMulti.Name = "txbSemillaMulti";
+            this.txbSemillaMulti.Size = new System.Drawing.Size(100, 21);
+            this.txbSemillaMulti.TabIndex = 1;
+            // 
+            // btnGenerarMultiplicativo
+            // 
+            this.btnGenerarMultiplicativo.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarMultiplicativo.Location = new System.Drawing.Point(159, 250);
+            this.btnGenerarMultiplicativo.Name = "btnGenerarMultiplicativo";
+            this.btnGenerarMultiplicativo.Size = new System.Drawing.Size(170, 57);
+            this.btnGenerarMultiplicativo.TabIndex = 0;
+            this.btnGenerarMultiplicativo.Text = "Generar";
+            this.btnGenerarMultiplicativo.UseVisualStyleBackColor = true;
+            this.btnGenerarMultiplicativo.Click += new System.EventHandler(this.btnGenerarMultiplicativo_Click);
+            // 
+            // pnlAditivo
+            // 
+            this.pnlAditivo.Controls.Add(this.lblAditivoIngrNewSemilla);
+            this.pnlAditivo.Controls.Add(this.txbAditivoSusecion);
+            this.pnlAditivo.Controls.Add(this.txbAditivoIngrSemilla);
+            this.pnlAditivo.Controls.Add(this.lblAditivoIngrSemilla);
+            this.pnlAditivo.Controls.Add(this.lblAditivoIngrN);
+            this.pnlAditivo.Controls.Add(this.lblAditivoIngrM);
+            this.pnlAditivo.Controls.Add(this.lblAditivoIngrK);
+            this.pnlAditivo.Controls.Add(this.txbAditivoIngrN);
+            this.pnlAditivo.Controls.Add(this.txbAditivoIngrM);
+            this.pnlAditivo.Controls.Add(this.txbAditivoIngrK);
+            this.pnlAditivo.Controls.Add(this.btnGenerarAditivo);
+            this.pnlAditivo.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlAditivo.Location = new System.Drawing.Point(12, 122);
+            this.pnlAditivo.Name = "pnlAditivo";
+            this.pnlAditivo.Size = new System.Drawing.Size(513, 320);
+            this.pnlAditivo.TabIndex = 28;
+            // 
+            // btnGenerarAditivo
+            // 
+            this.btnGenerarAditivo.Location = new System.Drawing.Point(188, 252);
+            this.btnGenerarAditivo.Name = "btnGenerarAditivo";
+            this.btnGenerarAditivo.Size = new System.Drawing.Size(117, 41);
+            this.btnGenerarAditivo.TabIndex = 0;
+            this.btnGenerarAditivo.Text = "Generar";
+            this.btnGenerarAditivo.UseVisualStyleBackColor = true;
+            this.btnGenerarAditivo.Click += new System.EventHandler(this.btnGenerarAditivo_Click);
+            // 
+            // txbAditivoIngrK
+            // 
+            this.txbAditivoIngrK.Location = new System.Drawing.Point(84, 29);
+            this.txbAditivoIngrK.Name = "txbAditivoIngrK";
+            this.txbAditivoIngrK.Size = new System.Drawing.Size(100, 21);
+            this.txbAditivoIngrK.TabIndex = 1;
+            // 
+            // txbAditivoIngrM
+            // 
+            this.txbAditivoIngrM.Location = new System.Drawing.Point(84, 77);
+            this.txbAditivoIngrM.Name = "txbAditivoIngrM";
+            this.txbAditivoIngrM.Size = new System.Drawing.Size(100, 21);
+            this.txbAditivoIngrM.TabIndex = 2;
+            // 
+            // txbAditivoIngrN
+            // 
+            this.txbAditivoIngrN.Location = new System.Drawing.Point(84, 126);
+            this.txbAditivoIngrN.Name = "txbAditivoIngrN";
+            this.txbAditivoIngrN.Size = new System.Drawing.Size(100, 21);
+            this.txbAditivoIngrN.TabIndex = 3;
+            // 
+            // lblAditivoIngrK
+            // 
+            this.lblAditivoIngrK.AutoSize = true;
+            this.lblAditivoIngrK.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAditivoIngrK.Location = new System.Drawing.Point(18, 35);
+            this.lblAditivoIngrK.Name = "lblAditivoIngrK";
+            this.lblAditivoIngrK.Size = new System.Drawing.Size(60, 15);
+            this.lblAditivoIngrK.TabIndex = 4;
+            this.lblAditivoIngrK.Text = "Ingrese K";
+            // 
+            // lblAditivoIngrM
+            // 
+            this.lblAditivoIngrM.AutoSize = true;
+            this.lblAditivoIngrM.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAditivoIngrM.Location = new System.Drawing.Point(18, 83);
+            this.lblAditivoIngrM.Name = "lblAditivoIngrM";
+            this.lblAditivoIngrM.Size = new System.Drawing.Size(61, 15);
+            this.lblAditivoIngrM.TabIndex = 5;
+            this.lblAditivoIngrM.Text = "Ingrese M";
+            // 
+            // lblAditivoIngrN
+            // 
+            this.lblAditivoIngrN.AutoSize = true;
+            this.lblAditivoIngrN.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAditivoIngrN.Location = new System.Drawing.Point(18, 132);
+            this.lblAditivoIngrN.Name = "lblAditivoIngrN";
+            this.lblAditivoIngrN.Size = new System.Drawing.Size(66, 15);
+            this.lblAditivoIngrN.TabIndex = 6;
+            this.lblAditivoIngrN.Text = "Ingrese N°";
+            // 
+            // lblAditivoIngrSemilla
+            // 
+            this.lblAditivoIngrSemilla.AutoSize = true;
+            this.lblAditivoIngrSemilla.Location = new System.Drawing.Point(18, 181);
+            this.lblAditivoIngrSemilla.Name = "lblAditivoIngrSemilla";
+            this.lblAditivoIngrSemilla.Size = new System.Drawing.Size(107, 15);
+            this.lblAditivoIngrSemilla.TabIndex = 7;
+            this.lblAditivoIngrSemilla.Text = "Ingrese la Semilla";
+            // 
+            // txbAditivoIngrSemilla
+            // 
+            this.txbAditivoIngrSemilla.Location = new System.Drawing.Point(126, 175);
+            this.txbAditivoIngrSemilla.Name = "txbAditivoIngrSemilla";
+            this.txbAditivoIngrSemilla.Size = new System.Drawing.Size(100, 21);
+            this.txbAditivoIngrSemilla.TabIndex = 8;
+            // 
+            // txbAditivoSusecion
+            // 
+            this.txbAditivoSusecion.Location = new System.Drawing.Point(288, 31);
+            this.txbAditivoSusecion.Multiline = true;
+            this.txbAditivoSusecion.Name = "txbAditivoSusecion";
+            this.txbAditivoSusecion.Size = new System.Drawing.Size(211, 158);
+            this.txbAditivoSusecion.TabIndex = 9;
+            // 
+            // lblAditivoIngrNewSemilla
+            // 
+            this.lblAditivoIngrNewSemilla.AutoSize = true;
+            this.lblAditivoIngrNewSemilla.ForeColor = System.Drawing.Color.Red;
+            this.lblAditivoIngrNewSemilla.Location = new System.Drawing.Point(66, 228);
+            this.lblAditivoIngrNewSemilla.Name = "lblAditivoIngrNewSemilla";
+            this.lblAditivoIngrNewSemilla.Size = new System.Drawing.Size(132, 15);
+            this.lblAditivoIngrNewSemilla.TabIndex = 10;
+            this.lblAditivoIngrNewSemilla.Text = "Ingrese Nueva Semilla";
+            this.lblAditivoIngrNewSemilla.Visible = false;
+            // 
             // appGeneradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 454);
+            this.Controls.Add(this.pnlAditivo);
             this.Controls.Add(this.pnlMultiplicativo);
             this.Controls.Add(this.rdbCongruenciaMixto);
             this.Controls.Add(this.rdbCongruenciaMultiplicativo);
@@ -730,6 +860,8 @@
             this.pnlFibonacci.PerformLayout();
             this.pnlMultiplicativo.ResumeLayout(false);
             this.pnlMultiplicativo.PerformLayout();
+            this.pnlAditivo.ResumeLayout(false);
+            this.pnlAditivo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -797,6 +929,18 @@
         private System.Windows.Forms.TextBox txbInterBmulti;
         private System.Windows.Forms.TextBox txbInterAmulti;
         private System.Windows.Forms.CheckBox cxbInterbMulti;
+        private System.Windows.Forms.Panel pnlAditivo;
+        private System.Windows.Forms.Button btnGenerarAditivo;
+        private System.Windows.Forms.TextBox txbAditivoSusecion;
+        private System.Windows.Forms.TextBox txbAditivoIngrSemilla;
+        private System.Windows.Forms.Label lblAditivoIngrSemilla;
+        private System.Windows.Forms.Label lblAditivoIngrN;
+        private System.Windows.Forms.Label lblAditivoIngrM;
+        private System.Windows.Forms.Label lblAditivoIngrK;
+        private System.Windows.Forms.TextBox txbAditivoIngrN;
+        private System.Windows.Forms.TextBox txbAditivoIngrM;
+        private System.Windows.Forms.TextBox txbAditivoIngrK;
+        private System.Windows.Forms.Label lblAditivoIngrNewSemilla;
     }
 }
 

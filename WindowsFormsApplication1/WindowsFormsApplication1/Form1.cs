@@ -50,6 +50,7 @@ namespace WindowsFormsApplication1
                 rdbCongruenciaAditivo.Visible = false;
                 rdbCongruenciaMultiplicativo.Visible = false;
                 rdbCongruenciaMixto.Visible = false;
+                pnlAditivo.Visible = false;
 
 
             }
@@ -208,6 +209,7 @@ namespace WindowsFormsApplication1
                 rdbCongruenciaAditivo.Visible = false;
                 rdbCongruenciaMultiplicativo.Visible = false;
                 rdbCongruenciaMixto.Visible = false;
+                pnlAditivo.Visible = false;
 
             }
             else { pnlFibonacci.Visible = false; }
@@ -474,6 +476,7 @@ namespace WindowsFormsApplication1
                 pnlFibonacci.Visible = false;
                 pnlVonNeumann.Visible = false;
                 pnlMultiplicativo.Visible = true;
+                pnlAditivo.Visible = false;
                 lblCorch1Multi.Visible = false;
                 txbInterAmulti.Visible = false;
                 lblComaMulti.Visible = false;
@@ -561,6 +564,41 @@ namespace WindowsFormsApplication1
                 txbInterBmulti.Text = "9";
 
             }
+        }
+
+        private void rdbCongruenciaAditivo_CheckedChanged(object sender, EventArgs e)
+        {
+            pnlFibonacci.Visible = false;
+            pnlVonNeumann.Visible = false;
+            pnlMultiplicativo.Visible = false;
+            pnlAditivo.Visible = true;
+            lblCorch1Multi.Visible = false;
+            txbInterAmulti.Visible = false;
+            lblComaMulti.Visible = false;
+            txbInterBmulti.Visible = false;
+            lblCorch2Multi.Visible = false;
+            
+        }
+
+        private void btnGenerarAditivo_Click(object sender, EventArgs e)
+        {
+            int k = Convert.ToInt32(txbAditivoIngrK.Text);
+            int m = Convert.ToInt32(txbAditivoIngrM.Text);
+            int n = Convert.ToInt32(txbAditivoIngrN.Text);
+
+            int [] vec = new int [k+1];
+
+            for (int i=0; i > k + 1; i++) {
+                if (i == 1)
+                {
+                    lblAditivoIngrNewSemilla.Visible = true;
+                    txbAditivoIngrSemilla.Text = "";
+                } 
+                vec[i] =(Convert.ToInt32(txbAditivoIngrSemilla.Text));
+            }
+            lblAditivoIngrNewSemilla.Visible = false;
+
+
         }
     }
 }
