@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.rdbVonNeumann = new System.Windows.Forms.RadioButton();
             this.rdbFibonacci = new System.Windows.Forms.RadioButton();
@@ -88,21 +89,24 @@
             this.txbSemillaMulti = new System.Windows.Forms.TextBox();
             this.btnGenerarMultiplicativo = new System.Windows.Forms.Button();
             this.pnlAditivo = new System.Windows.Forms.Panel();
-            this.btnGenerarAditivo = new System.Windows.Forms.Button();
-            this.txbAditivoIngrK = new System.Windows.Forms.TextBox();
-            this.txbAditivoIngrM = new System.Windows.Forms.TextBox();
-            this.txbAditivoIngrN = new System.Windows.Forms.TextBox();
-            this.lblAditivoIngrK = new System.Windows.Forms.Label();
-            this.lblAditivoIngrM = new System.Windows.Forms.Label();
-            this.lblAditivoIngrN = new System.Windows.Forms.Label();
-            this.lblAditivoIngrSemilla = new System.Windows.Forms.Label();
-            this.txbAditivoIngrSemilla = new System.Windows.Forms.TextBox();
-            this.txbAditivoSusecion = new System.Windows.Forms.TextBox();
             this.lblAditivoIngrNewSemilla = new System.Windows.Forms.Label();
+            this.txbAditivoSusecion = new System.Windows.Forms.TextBox();
+            this.txbAditivoIngrSemilla = new System.Windows.Forms.TextBox();
+            this.lblAditivoIngrSemilla = new System.Windows.Forms.Label();
+            this.lblAditivoIngrN = new System.Windows.Forms.Label();
+            this.lblAditivoIngrM = new System.Windows.Forms.Label();
+            this.lblAditivoIngrK = new System.Windows.Forms.Label();
+            this.txbAditivoIngrN = new System.Windows.Forms.TextBox();
+            this.txbAditivoIngrM = new System.Windows.Forms.TextBox();
+            this.txbAditivoIngrK = new System.Windows.Forms.TextBox();
+            this.btnGenerarAditivo = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.epIngreseSemilla = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlVonNeumann.SuspendLayout();
             this.pnlFibonacci.SuspendLayout();
             this.pnlMultiplicativo.SuspendLayout();
             this.pnlAditivo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epIngreseSemilla)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -739,56 +743,40 @@
             this.pnlAditivo.Size = new System.Drawing.Size(513, 320);
             this.pnlAditivo.TabIndex = 28;
             // 
-            // btnGenerarAditivo
+            // lblAditivoIngrNewSemilla
             // 
-            this.btnGenerarAditivo.Location = new System.Drawing.Point(188, 252);
-            this.btnGenerarAditivo.Name = "btnGenerarAditivo";
-            this.btnGenerarAditivo.Size = new System.Drawing.Size(117, 41);
-            this.btnGenerarAditivo.TabIndex = 0;
-            this.btnGenerarAditivo.Text = "Generar";
-            this.btnGenerarAditivo.UseVisualStyleBackColor = true;
-            this.btnGenerarAditivo.Click += new System.EventHandler(this.btnGenerarAditivo_Click);
+            this.lblAditivoIngrNewSemilla.AutoSize = true;
+            this.lblAditivoIngrNewSemilla.ForeColor = System.Drawing.Color.Red;
+            this.lblAditivoIngrNewSemilla.Location = new System.Drawing.Point(66, 228);
+            this.lblAditivoIngrNewSemilla.Name = "lblAditivoIngrNewSemilla";
+            this.lblAditivoIngrNewSemilla.Size = new System.Drawing.Size(132, 15);
+            this.lblAditivoIngrNewSemilla.TabIndex = 10;
+            this.lblAditivoIngrNewSemilla.Text = "Ingrese Nueva Semilla";
+            this.lblAditivoIngrNewSemilla.Visible = false;
             // 
-            // txbAditivoIngrK
+            // txbAditivoSusecion
             // 
-            this.txbAditivoIngrK.Location = new System.Drawing.Point(84, 29);
-            this.txbAditivoIngrK.Name = "txbAditivoIngrK";
-            this.txbAditivoIngrK.Size = new System.Drawing.Size(100, 21);
-            this.txbAditivoIngrK.TabIndex = 1;
+            this.txbAditivoSusecion.Location = new System.Drawing.Point(288, 31);
+            this.txbAditivoSusecion.Multiline = true;
+            this.txbAditivoSusecion.Name = "txbAditivoSusecion";
+            this.txbAditivoSusecion.Size = new System.Drawing.Size(211, 158);
+            this.txbAditivoSusecion.TabIndex = 9;
             // 
-            // txbAditivoIngrM
+            // txbAditivoIngrSemilla
             // 
-            this.txbAditivoIngrM.Location = new System.Drawing.Point(84, 77);
-            this.txbAditivoIngrM.Name = "txbAditivoIngrM";
-            this.txbAditivoIngrM.Size = new System.Drawing.Size(100, 21);
-            this.txbAditivoIngrM.TabIndex = 2;
+            this.txbAditivoIngrSemilla.Location = new System.Drawing.Point(126, 175);
+            this.txbAditivoIngrSemilla.Name = "txbAditivoIngrSemilla";
+            this.txbAditivoIngrSemilla.Size = new System.Drawing.Size(100, 21);
+            this.txbAditivoIngrSemilla.TabIndex = 8;
             // 
-            // txbAditivoIngrN
+            // lblAditivoIngrSemilla
             // 
-            this.txbAditivoIngrN.Location = new System.Drawing.Point(84, 126);
-            this.txbAditivoIngrN.Name = "txbAditivoIngrN";
-            this.txbAditivoIngrN.Size = new System.Drawing.Size(100, 21);
-            this.txbAditivoIngrN.TabIndex = 3;
-            // 
-            // lblAditivoIngrK
-            // 
-            this.lblAditivoIngrK.AutoSize = true;
-            this.lblAditivoIngrK.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAditivoIngrK.Location = new System.Drawing.Point(18, 35);
-            this.lblAditivoIngrK.Name = "lblAditivoIngrK";
-            this.lblAditivoIngrK.Size = new System.Drawing.Size(60, 15);
-            this.lblAditivoIngrK.TabIndex = 4;
-            this.lblAditivoIngrK.Text = "Ingrese K";
-            // 
-            // lblAditivoIngrM
-            // 
-            this.lblAditivoIngrM.AutoSize = true;
-            this.lblAditivoIngrM.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAditivoIngrM.Location = new System.Drawing.Point(18, 83);
-            this.lblAditivoIngrM.Name = "lblAditivoIngrM";
-            this.lblAditivoIngrM.Size = new System.Drawing.Size(61, 15);
-            this.lblAditivoIngrM.TabIndex = 5;
-            this.lblAditivoIngrM.Text = "Ingrese M";
+            this.lblAditivoIngrSemilla.AutoSize = true;
+            this.lblAditivoIngrSemilla.Location = new System.Drawing.Point(18, 181);
+            this.lblAditivoIngrSemilla.Name = "lblAditivoIngrSemilla";
+            this.lblAditivoIngrSemilla.Size = new System.Drawing.Size(107, 15);
+            this.lblAditivoIngrSemilla.TabIndex = 7;
+            this.lblAditivoIngrSemilla.Text = "Ingrese la Semilla";
             // 
             // lblAditivoIngrN
             // 
@@ -800,40 +788,62 @@
             this.lblAditivoIngrN.TabIndex = 6;
             this.lblAditivoIngrN.Text = "Ingrese N°";
             // 
-            // lblAditivoIngrSemilla
+            // lblAditivoIngrM
             // 
-            this.lblAditivoIngrSemilla.AutoSize = true;
-            this.lblAditivoIngrSemilla.Location = new System.Drawing.Point(18, 181);
-            this.lblAditivoIngrSemilla.Name = "lblAditivoIngrSemilla";
-            this.lblAditivoIngrSemilla.Size = new System.Drawing.Size(107, 15);
-            this.lblAditivoIngrSemilla.TabIndex = 7;
-            this.lblAditivoIngrSemilla.Text = "Ingrese la Semilla";
+            this.lblAditivoIngrM.AutoSize = true;
+            this.lblAditivoIngrM.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAditivoIngrM.Location = new System.Drawing.Point(18, 83);
+            this.lblAditivoIngrM.Name = "lblAditivoIngrM";
+            this.lblAditivoIngrM.Size = new System.Drawing.Size(61, 15);
+            this.lblAditivoIngrM.TabIndex = 5;
+            this.lblAditivoIngrM.Text = "Ingrese M";
             // 
-            // txbAditivoIngrSemilla
+            // lblAditivoIngrK
             // 
-            this.txbAditivoIngrSemilla.Location = new System.Drawing.Point(126, 175);
-            this.txbAditivoIngrSemilla.Name = "txbAditivoIngrSemilla";
-            this.txbAditivoIngrSemilla.Size = new System.Drawing.Size(100, 21);
-            this.txbAditivoIngrSemilla.TabIndex = 8;
+            this.lblAditivoIngrK.AutoSize = true;
+            this.lblAditivoIngrK.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAditivoIngrK.Location = new System.Drawing.Point(18, 35);
+            this.lblAditivoIngrK.Name = "lblAditivoIngrK";
+            this.lblAditivoIngrK.Size = new System.Drawing.Size(60, 15);
+            this.lblAditivoIngrK.TabIndex = 4;
+            this.lblAditivoIngrK.Text = "Ingrese K";
             // 
-            // txbAditivoSusecion
+            // txbAditivoIngrN
             // 
-            this.txbAditivoSusecion.Location = new System.Drawing.Point(288, 31);
-            this.txbAditivoSusecion.Multiline = true;
-            this.txbAditivoSusecion.Name = "txbAditivoSusecion";
-            this.txbAditivoSusecion.Size = new System.Drawing.Size(211, 158);
-            this.txbAditivoSusecion.TabIndex = 9;
+            this.txbAditivoIngrN.Location = new System.Drawing.Point(84, 126);
+            this.txbAditivoIngrN.Name = "txbAditivoIngrN";
+            this.txbAditivoIngrN.Size = new System.Drawing.Size(100, 21);
+            this.txbAditivoIngrN.TabIndex = 3;
             // 
-            // lblAditivoIngrNewSemilla
+            // txbAditivoIngrM
             // 
-            this.lblAditivoIngrNewSemilla.AutoSize = true;
-            this.lblAditivoIngrNewSemilla.ForeColor = System.Drawing.Color.Red;
-            this.lblAditivoIngrNewSemilla.Location = new System.Drawing.Point(66, 228);
-            this.lblAditivoIngrNewSemilla.Name = "lblAditivoIngrNewSemilla";
-            this.lblAditivoIngrNewSemilla.Size = new System.Drawing.Size(132, 15);
-            this.lblAditivoIngrNewSemilla.TabIndex = 10;
-            this.lblAditivoIngrNewSemilla.Text = "Ingrese Nueva Semilla";
-            this.lblAditivoIngrNewSemilla.Visible = false;
+            this.txbAditivoIngrM.Location = new System.Drawing.Point(84, 77);
+            this.txbAditivoIngrM.Name = "txbAditivoIngrM";
+            this.txbAditivoIngrM.Size = new System.Drawing.Size(100, 21);
+            this.txbAditivoIngrM.TabIndex = 2;
+            // 
+            // txbAditivoIngrK
+            // 
+            this.txbAditivoIngrK.Location = new System.Drawing.Point(84, 29);
+            this.txbAditivoIngrK.Name = "txbAditivoIngrK";
+            this.txbAditivoIngrK.Size = new System.Drawing.Size(100, 21);
+            this.txbAditivoIngrK.TabIndex = 1;
+            // 
+            // btnGenerarAditivo
+            // 
+            this.btnGenerarAditivo.Location = new System.Drawing.Point(188, 252);
+            this.btnGenerarAditivo.Name = "btnGenerarAditivo";
+            this.btnGenerarAditivo.Size = new System.Drawing.Size(117, 41);
+            this.btnGenerarAditivo.TabIndex = 0;
+            this.btnGenerarAditivo.Text = "Generar";
+            this.btnGenerarAditivo.UseVisualStyleBackColor = true;
+            this.btnGenerarAditivo.Click += new System.EventHandler(this.btnGenerarAditivo_Click);
+            // 
+            // epIngreseSemilla
+            // 
+            this.epIngreseSemilla.BlinkRate = 2;
+            this.epIngreseSemilla.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epIngreseSemilla.ContainerControl = this;
             // 
             // appGeneradores
             // 
@@ -862,6 +872,7 @@
             this.pnlMultiplicativo.PerformLayout();
             this.pnlAditivo.ResumeLayout(false);
             this.pnlAditivo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epIngreseSemilla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -941,6 +952,8 @@
         private System.Windows.Forms.TextBox txbAditivoIngrM;
         private System.Windows.Forms.TextBox txbAditivoIngrK;
         private System.Windows.Forms.Label lblAditivoIngrNewSemilla;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ErrorProvider epIngreseSemilla;
     }
 }
 

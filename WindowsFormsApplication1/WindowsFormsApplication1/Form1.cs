@@ -577,31 +577,51 @@ namespace WindowsFormsApplication1
             lblComaMulti.Visible = false;
             txbInterBmulti.Visible = false;
             lblCorch2Multi.Visible = false;
-            
-        }
-
-        private void btnGenerarAditivo_Click(object sender, EventArgs e)
-        {
-            int k = Convert.ToInt32(txbAditivoIngrK.Text);
-            int m = Convert.ToInt32(txbAditivoIngrM.Text);
-            int n = Convert.ToInt32(txbAditivoIngrN.Text);
-
-            int [] vec = new int [k+1];
-
-            for (int i=0; i > k + 1; i++) {
-                if (i == 1)
-                {
-                    lblAditivoIngrNewSemilla.Visible = true;
-                    txbAditivoIngrSemilla.Text = "";
-                } 
-                vec[i] =(Convert.ToInt32(txbAditivoIngrSemilla.Text));
-            }
             lblAditivoIngrNewSemilla.Visible = false;
 
 
+        }   // checkboxs para activa congruencias aditiva...
+
+        private void btnGenerarAditivo_Click(object sender, EventArgs e)  //Codigo de Congruencia Aditiva
+        {
+            txbAditivoSusecion.Text = "";
+            int k = Convert.ToInt32(txbAditivoIngrK.Text);     //ingreso de daatos
+            int m = Convert.ToInt32(txbAditivoIngrM.Text);
+            int n = Convert.ToInt32(txbAditivoIngrN.Text);
+            string v;
+            int [] vec = new int [k+n];                        //ingreso de la semilla segun k
+
+            for (int i=0; i < k + 1; i++) {
+                
+                if (i >= 1)
+                {
+                    v = Microsoft.VisualBasic.Interaction.InputBox("ingrese otra Semilla", "Semilla", "1",100,100);
+                    vec[i] = int.Parse(v);
+                    txbAditivoSusecion.Text = txbAditivoSusecion.Text + Convert.ToString(vec[i] + ", ");
+                }
+                else if(txbAditivoIngrSemilla.Text != "") {
+                    vec[i] = (Convert.ToInt32(txbAditivoIngrSemilla.Text));
+                    txbAditivoSusecion.Text = txbAditivoSusecion.Text + Convert.ToString(vec[i] + ", ");
+                }
+
+                txbAditivoIngrSemilla.Text = Convert.ToString(vec[i]);
+                
+
+            }
+            for (int i=k+1; i<n; i++) {
+                int a = (vec[i]+ vec[i - k]);
+                vec[i + 1] = (a %= m);
+                txbAditivoSusecion.Text = txbAditivoSusecion.Text + Convert.ToString(vec[i+1]) + ", ";
+            }
+           
+
+
         }
+
+     
     }
 }
+
 //generar interbalo  [a,b]   agregar codigo   [R1*(b-a)]+a
 /*  ejemplo: [0,7]
  *    susecion= 8, 0 , 3 etc...
