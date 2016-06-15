@@ -210,6 +210,7 @@ namespace WindowsFormsApplication1
                 rdbCongruenciaMultiplicativo.Visible = false;
                 rdbCongruenciaMixto.Visible = false;
                 pnlAditivo.Visible = false;
+                pnlMixtoCongruencia.Visible = false;
 
             }
             else { pnlFibonacci.Visible = false; }
@@ -484,6 +485,7 @@ namespace WindowsFormsApplication1
                 lblCorch2Multi.Visible = false;
                 txbInterAmulti.Text = "0";
                 txbInterBmulti.Text = "9";
+                pnlMixtoCongruencia.Visible = false;
 
             }
         }
@@ -578,6 +580,7 @@ namespace WindowsFormsApplication1
             txbInterBmulti.Visible = false;
             lblCorch2Multi.Visible = false;
             lblAditivoIngrNewSemilla.Visible = false;
+            pnlMixtoCongruencia.Visible = false;
 
 
         }   // checkboxs para activa congruencias aditiva...
@@ -618,8 +621,61 @@ namespace WindowsFormsApplication1
 
         }
 
-     
+        private void rdbCongruenciaMixto_CheckedChanged(object sender, EventArgs e)
+        {
+            pnlFibonacci.Visible = false;
+            pnlVonNeumann.Visible = false;
+            pnlMultiplicativo.Visible = false;
+            pnlAditivo.Visible = false;
+            lblCorch1Multi.Visible = false;
+            txbInterAmulti.Visible = false;
+            lblComaMulti.Visible = false;
+            txbInterBmulti.Visible = false;
+            lblCorch2Multi.Visible = false;
+            lblAditivoIngrNewSemilla.Visible = false;
+            pnlMixtoCongruencia.Visible = true;
+        }  // check radio boton mixto congruencia
+
+        private void btnGenerarMixto_Click(object sender, EventArgs e)  //Codigo de MIxto congruencias
+        {
+            int x0 = int.Parse(txbSemillaMixto.Text);
+            int m = int.Parse(txbmMixto.Text);
+            int c = int.Parse(txbcMixto.Text);
+            int a = int.Parse(txbaMixto.Text);
+            int n = int.Parse(txbnMixto.Text);
+
+            String salida;
+            int sem;
+            sem = x0;
+            //int salida;
+
+            salida = Convert.ToString(sem);
+            //listBox_resultado.Items.Add("x" + cont + ":        " + Convert.ToString(x0));
+
+            int incrementoI;
+            for (int i = x0.ToString().Length; i <= n; i += incrementoI)
+            {
+                int x = (a * sem + c) % m;
+                sem = x;
+                salida += sem.ToString();
+                incrementoI = sem.ToString().Length;
+
+            }
+
+            if (salida.Length > n)
+            {
+                String salidaMod = salida.Substring(0, n);
+                txbSucesionMixto.Text = salidaMod;
+            }
+            else
+            {
+                txbSucesionMixto.Text = salida;
+            }
+        }
+
+       
     }
+    
 }
 
 //generar interbalo  [a,b]   agregar codigo   [R1*(b-a)]+a
