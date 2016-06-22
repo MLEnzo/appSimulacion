@@ -210,7 +210,7 @@ namespace WindowsFormsApplication1
                 rdbCongruenciaMultiplicativo.Visible = false;
                 rdbCongruenciaMixto.Visible = false;
                 pnlAditivo.Visible = false;
-                pnlMixtoCongruencia.Visible = false;
+                pnlMixto.Visible = false;
 
             }
             else { pnlFibonacci.Visible = false; }
@@ -485,7 +485,7 @@ namespace WindowsFormsApplication1
                 lblCorch2Multi.Visible = false;
                 txbInterAmulti.Text = "0";
                 txbInterBmulti.Text = "9";
-                pnlMixtoCongruencia.Visible = false;
+                pnlMixto.Visible = false;
 
             }
         }
@@ -580,7 +580,7 @@ namespace WindowsFormsApplication1
             txbInterBmulti.Visible = false;
             lblCorch2Multi.Visible = false;
             lblAditivoIngrNewSemilla.Visible = false;
-            pnlMixtoCongruencia.Visible = false;
+            pnlMixto.Visible = false;
 
 
         }   // checkboxs para activa congruencias aditiva...
@@ -623,20 +623,17 @@ namespace WindowsFormsApplication1
 
         private void rdbCongruenciaMixto_CheckedChanged(object sender, EventArgs e)
         {
-            pnlFibonacci.Visible = false;
-            pnlVonNeumann.Visible = false;
-            pnlMultiplicativo.Visible = false;
-            pnlAditivo.Visible = false;
-            lblCorch1Multi.Visible = false;
-            txbInterAmulti.Visible = false;
-            lblComaMulti.Visible = false;
-            txbInterBmulti.Visible = false;
-            lblCorch2Multi.Visible = false;
-            lblAditivoIngrNewSemilla.Visible = false;
-            pnlMixtoCongruencia.Visible = true;
+            if (rdbCongruenciaMixto.Checked==true) {
+                pnlAditivo.Visible = true;
+                pnlMixto.Visible = true;
+                
+            }
+            
         }  // check radio boton mixto congruencia
 
-        private void btnGenerarMixto_Click(object sender, EventArgs e)  //Codigo de MIxto congruencias
+     
+
+        private void btnGenerarMixto_Click_1(object sender, EventArgs e)
         {
             int x0 = int.Parse(txbSemillaMixto.Text);
             int m = int.Parse(txbmMixto.Text);
@@ -665,15 +662,22 @@ namespace WindowsFormsApplication1
             if (salida.Length > n)
             {
                 String salidaMod = salida.Substring(0, n);
-                txbSucesionMixto.Text = salidaMod;
+                
+
+                string su="";
+                for (int i = 0; i < salidaMod.Length - 1; i++)               //for que separa los numeros aleatorios de la sucesion
+                {
+                    su = su + salidaMod.Substring(i, 1) + ", ";
+                }
+                su = su + salidaMod.Substring((salidaMod.Length-1), 1);
+                txbSucesionMixto.Text = su;
+
             }
             else
             {
                 txbSucesionMixto.Text = salida;
             }
         }
-
-       
     }
     
 }

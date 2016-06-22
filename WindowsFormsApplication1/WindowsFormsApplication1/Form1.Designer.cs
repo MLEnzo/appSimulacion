@@ -102,25 +102,25 @@
             this.btnGenerarAditivo = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.epIngreseSemilla = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pnlMixtoCongruencia = new System.Windows.Forms.Panel();
+            this.pnlMixto = new System.Windows.Forms.Panel();
             this.txbSemillaMixto = new System.Windows.Forms.TextBox();
-            this.txbmMixto = new System.Windows.Forms.TextBox();
-            this.txbcMixto = new System.Windows.Forms.TextBox();
-            this.txbaMixto = new System.Windows.Forms.TextBox();
-            this.txbnMixto = new System.Windows.Forms.TextBox();
             this.lblSemillaMixto = new System.Windows.Forms.Label();
             this.lblmMixto = new System.Windows.Forms.Label();
+            this.txbmMixto = new System.Windows.Forms.TextBox();
+            this.txbcMixto = new System.Windows.Forms.TextBox();
             this.lblcMixto = new System.Windows.Forms.Label();
             this.lblaMixto = new System.Windows.Forms.Label();
+            this.txbaMixto = new System.Windows.Forms.TextBox();
+            this.txbnMixto = new System.Windows.Forms.TextBox();
             this.lblnMixto = new System.Windows.Forms.Label();
-            this.txbSucesionMixto = new System.Windows.Forms.TextBox();
             this.btnGenerarMixto = new System.Windows.Forms.Button();
+            this.txbSucesionMixto = new System.Windows.Forms.TextBox();
             this.pnlVonNeumann.SuspendLayout();
             this.pnlFibonacci.SuspendLayout();
             this.pnlMultiplicativo.SuspendLayout();
             this.pnlAditivo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epIngreseSemilla)).BeginInit();
-            this.pnlMixtoCongruencia.SuspendLayout();
+            this.pnlMixto.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -741,7 +741,7 @@
             // 
             // pnlAditivo
             // 
-            this.pnlAditivo.Controls.Add(this.pnlMixtoCongruencia);
+            this.pnlAditivo.Controls.Add(this.pnlMixto);
             this.pnlAditivo.Controls.Add(this.lblAditivoIngrNewSemilla);
             this.pnlAditivo.Controls.Add(this.txbAditivoSusecion);
             this.pnlAditivo.Controls.Add(this.txbAditivoIngrSemilla);
@@ -861,129 +861,131 @@
             this.epIngreseSemilla.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.epIngreseSemilla.ContainerControl = this;
             // 
-            // pnlMixtoCongruencia
+            // pnlMixto
             // 
-            this.pnlMixtoCongruencia.Controls.Add(this.btnGenerarMixto);
-            this.pnlMixtoCongruencia.Controls.Add(this.txbSucesionMixto);
-            this.pnlMixtoCongruencia.Controls.Add(this.lblnMixto);
-            this.pnlMixtoCongruencia.Controls.Add(this.lblaMixto);
-            this.pnlMixtoCongruencia.Controls.Add(this.lblcMixto);
-            this.pnlMixtoCongruencia.Controls.Add(this.lblmMixto);
-            this.pnlMixtoCongruencia.Controls.Add(this.lblSemillaMixto);
-            this.pnlMixtoCongruencia.Controls.Add(this.txbnMixto);
-            this.pnlMixtoCongruencia.Controls.Add(this.txbaMixto);
-            this.pnlMixtoCongruencia.Controls.Add(this.txbcMixto);
-            this.pnlMixtoCongruencia.Controls.Add(this.txbmMixto);
-            this.pnlMixtoCongruencia.Controls.Add(this.txbSemillaMixto);
-            this.pnlMixtoCongruencia.Location = new System.Drawing.Point(0, 0);
-            this.pnlMixtoCongruencia.Name = "pnlMixtoCongruencia";
-            this.pnlMixtoCongruencia.Size = new System.Drawing.Size(513, 320);
-            this.pnlMixtoCongruencia.TabIndex = 11;
+            this.pnlMixto.Controls.Add(this.txbSucesionMixto);
+            this.pnlMixto.Controls.Add(this.btnGenerarMixto);
+            this.pnlMixto.Controls.Add(this.lblnMixto);
+            this.pnlMixto.Controls.Add(this.txbnMixto);
+            this.pnlMixto.Controls.Add(this.txbaMixto);
+            this.pnlMixto.Controls.Add(this.lblaMixto);
+            this.pnlMixto.Controls.Add(this.lblcMixto);
+            this.pnlMixto.Controls.Add(this.txbcMixto);
+            this.pnlMixto.Controls.Add(this.txbmMixto);
+            this.pnlMixto.Controls.Add(this.lblmMixto);
+            this.pnlMixto.Controls.Add(this.lblSemillaMixto);
+            this.pnlMixto.Controls.Add(this.txbSemillaMixto);
+            this.pnlMixto.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlMixto.Location = new System.Drawing.Point(0, 0);
+            this.pnlMixto.Name = "pnlMixto";
+            this.pnlMixto.Size = new System.Drawing.Size(513, 320);
+            this.pnlMixto.TabIndex = 29;
+            this.pnlMixto.Visible = false;
             // 
             // txbSemillaMixto
             // 
-            this.txbSemillaMixto.Location = new System.Drawing.Point(126, 33);
+            this.txbSemillaMixto.Location = new System.Drawing.Point(135, 37);
             this.txbSemillaMixto.Name = "txbSemillaMixto";
             this.txbSemillaMixto.Size = new System.Drawing.Size(100, 21);
-            this.txbSemillaMixto.TabIndex = 0;
-            // 
-            // txbmMixto
-            // 
-            this.txbmMixto.Location = new System.Drawing.Point(126, 70);
-            this.txbmMixto.Name = "txbmMixto";
-            this.txbmMixto.Size = new System.Drawing.Size(100, 21);
-            this.txbmMixto.TabIndex = 1;
-            // 
-            // txbcMixto
-            // 
-            this.txbcMixto.Location = new System.Drawing.Point(126, 109);
-            this.txbcMixto.Name = "txbcMixto";
-            this.txbcMixto.Size = new System.Drawing.Size(100, 21);
-            this.txbcMixto.TabIndex = 2;
-            // 
-            // txbaMixto
-            // 
-            this.txbaMixto.Location = new System.Drawing.Point(126, 151);
-            this.txbaMixto.Name = "txbaMixto";
-            this.txbaMixto.Size = new System.Drawing.Size(100, 21);
-            this.txbaMixto.TabIndex = 3;
-            // 
-            // txbnMixto
-            // 
-            this.txbnMixto.Location = new System.Drawing.Point(126, 194);
-            this.txbnMixto.Name = "txbnMixto";
-            this.txbnMixto.Size = new System.Drawing.Size(100, 21);
-            this.txbnMixto.TabIndex = 4;
+            this.txbSemillaMixto.TabIndex = 1;
             // 
             // lblSemillaMixto
             // 
             this.lblSemillaMixto.AutoSize = true;
-            this.lblSemillaMixto.Location = new System.Drawing.Point(10, 39);
+            this.lblSemillaMixto.Location = new System.Drawing.Point(18, 43);
             this.lblSemillaMixto.Name = "lblSemillaMixto";
             this.lblSemillaMixto.Size = new System.Drawing.Size(107, 15);
-            this.lblSemillaMixto.TabIndex = 5;
+            this.lblSemillaMixto.TabIndex = 6;
             this.lblSemillaMixto.Text = "Ingrese la Semilla";
             // 
             // lblmMixto
             // 
             this.lblmMixto.AutoSize = true;
-            this.lblmMixto.Location = new System.Drawing.Point(54, 74);
+            this.lblmMixto.Location = new System.Drawing.Point(51, 80);
             this.lblmMixto.Name = "lblmMixto";
             this.lblmMixto.Size = new System.Drawing.Size(63, 15);
-            this.lblmMixto.TabIndex = 6;
+            this.lblmMixto.TabIndex = 7;
             this.lblmMixto.Text = "Ingrese m";
+            // 
+            // txbmMixto
+            // 
+            this.txbmMixto.Location = new System.Drawing.Point(135, 75);
+            this.txbmMixto.Name = "txbmMixto";
+            this.txbmMixto.Size = new System.Drawing.Size(100, 21);
+            this.txbmMixto.TabIndex = 8;
+            // 
+            // txbcMixto
+            // 
+            this.txbcMixto.Location = new System.Drawing.Point(135, 112);
+            this.txbcMixto.Name = "txbcMixto";
+            this.txbcMixto.Size = new System.Drawing.Size(100, 21);
+            this.txbcMixto.TabIndex = 9;
             // 
             // lblcMixto
             // 
             this.lblcMixto.AutoSize = true;
-            this.lblcMixto.Location = new System.Drawing.Point(59, 115);
+            this.lblcMixto.Location = new System.Drawing.Point(56, 118);
             this.lblcMixto.Name = "lblcMixto";
             this.lblcMixto.Size = new System.Drawing.Size(58, 15);
-            this.lblcMixto.TabIndex = 7;
+            this.lblcMixto.TabIndex = 10;
             this.lblcMixto.Text = "Ingrese c";
             // 
             // lblaMixto
             // 
             this.lblaMixto.AutoSize = true;
-            this.lblaMixto.Location = new System.Drawing.Point(58, 157);
+            this.lblaMixto.Location = new System.Drawing.Point(55, 161);
             this.lblaMixto.Name = "lblaMixto";
             this.lblaMixto.Size = new System.Drawing.Size(59, 15);
-            this.lblaMixto.TabIndex = 8;
+            this.lblaMixto.TabIndex = 11;
             this.lblaMixto.Text = "Ingrese a";
+            // 
+            // txbaMixto
+            // 
+            this.txbaMixto.Location = new System.Drawing.Point(135, 153);
+            this.txbaMixto.Name = "txbaMixto";
+            this.txbaMixto.Size = new System.Drawing.Size(100, 21);
+            this.txbaMixto.TabIndex = 12;
+            // 
+            // txbnMixto
+            // 
+            this.txbnMixto.Location = new System.Drawing.Point(135, 193);
+            this.txbnMixto.Name = "txbnMixto";
+            this.txbnMixto.Size = new System.Drawing.Size(100, 21);
+            this.txbnMixto.TabIndex = 13;
             // 
             // lblnMixto
             // 
             this.lblnMixto.AutoSize = true;
-            this.lblnMixto.Location = new System.Drawing.Point(58, 201);
+            this.lblnMixto.Location = new System.Drawing.Point(52, 199);
             this.lblnMixto.Name = "lblnMixto";
             this.lblnMixto.Size = new System.Drawing.Size(59, 15);
-            this.lblnMixto.TabIndex = 9;
+            this.lblnMixto.TabIndex = 14;
             this.lblnMixto.Text = "ingrese n";
+            // 
+            // btnGenerarMixto
+            // 
+            this.btnGenerarMixto.Location = new System.Drawing.Point(188, 242);
+            this.btnGenerarMixto.Name = "btnGenerarMixto";
+            this.btnGenerarMixto.Size = new System.Drawing.Size(110, 61);
+            this.btnGenerarMixto.TabIndex = 15;
+            this.btnGenerarMixto.Text = "Generar";
+            this.btnGenerarMixto.UseVisualStyleBackColor = true;
+            this.btnGenerarMixto.Click += new System.EventHandler(this.btnGenerarMixto_Click_1);
             // 
             // txbSucesionMixto
             // 
-            this.txbSucesionMixto.Location = new System.Drawing.Point(277, 30);
+            this.txbSucesionMixto.Location = new System.Drawing.Point(265, 26);
             this.txbSucesionMixto.Multiline = true;
             this.txbSucesionMixto.Name = "txbSucesionMixto";
             this.txbSucesionMixto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txbSucesionMixto.Size = new System.Drawing.Size(209, 186);
-            this.txbSucesionMixto.TabIndex = 10;
-            // 
-            // btnGenerarMixto
-            // 
-            this.btnGenerarMixto.Location = new System.Drawing.Point(188, 240);
-            this.btnGenerarMixto.Name = "btnGenerarMixto";
-            this.btnGenerarMixto.Size = new System.Drawing.Size(94, 43);
-            this.btnGenerarMixto.TabIndex = 11;
-            this.btnGenerarMixto.Text = "Generar";
-            this.btnGenerarMixto.UseVisualStyleBackColor = true;
-            this.btnGenerarMixto.Click += new System.EventHandler(this.btnGenerarMixto_Click);
+            this.txbSucesionMixto.TabIndex = 16;
             // 
             // appGeneradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 454);
+            this.ClientSize = new System.Drawing.Size(541, 454);
             this.Controls.Add(this.pnlAditivo);
             this.Controls.Add(this.pnlMultiplicativo);
             this.Controls.Add(this.rdbCongruenciaMixto);
@@ -1007,8 +1009,8 @@
             this.pnlAditivo.ResumeLayout(false);
             this.pnlAditivo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epIngreseSemilla)).EndInit();
-            this.pnlMixtoCongruencia.ResumeLayout(false);
-            this.pnlMixtoCongruencia.PerformLayout();
+            this.pnlMixto.ResumeLayout(false);
+            this.pnlMixto.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1090,19 +1092,19 @@
         private System.Windows.Forms.Label lblAditivoIngrNewSemilla;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ErrorProvider epIngreseSemilla;
-        private System.Windows.Forms.Panel pnlMixtoCongruencia;
-        private System.Windows.Forms.TextBox txbaMixto;
-        private System.Windows.Forms.TextBox txbcMixto;
-        private System.Windows.Forms.TextBox txbmMixto;
-        private System.Windows.Forms.TextBox txbSemillaMixto;
-        private System.Windows.Forms.Button btnGenerarMixto;
         private System.Windows.Forms.TextBox txbSucesionMixto;
+        private System.Windows.Forms.Button btnGenerarMixto;
         private System.Windows.Forms.Label lblnMixto;
+        private System.Windows.Forms.TextBox txbnMixto;
+        private System.Windows.Forms.TextBox txbaMixto;
         private System.Windows.Forms.Label lblaMixto;
         private System.Windows.Forms.Label lblcMixto;
+        private System.Windows.Forms.TextBox txbcMixto;
+        private System.Windows.Forms.TextBox txbmMixto;
         private System.Windows.Forms.Label lblmMixto;
         private System.Windows.Forms.Label lblSemillaMixto;
-        private System.Windows.Forms.TextBox txbnMixto;
+        private System.Windows.Forms.TextBox txbSemillaMixto;
+        internal System.Windows.Forms.Panel pnlMixto;
     }
 }
 
