@@ -102,11 +102,25 @@
             this.btnGenerarAditivo = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.epIngreseSemilla = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pnlMixtoCongruencia = new System.Windows.Forms.Panel();
+            this.txbSemillaMixto = new System.Windows.Forms.TextBox();
+            this.txbmMixto = new System.Windows.Forms.TextBox();
+            this.txbcMixto = new System.Windows.Forms.TextBox();
+            this.txbaMixto = new System.Windows.Forms.TextBox();
+            this.txbnMixto = new System.Windows.Forms.TextBox();
+            this.lblSemillaMixto = new System.Windows.Forms.Label();
+            this.lblmMixto = new System.Windows.Forms.Label();
+            this.lblcMixto = new System.Windows.Forms.Label();
+            this.lblaMixto = new System.Windows.Forms.Label();
+            this.lblnMixto = new System.Windows.Forms.Label();
+            this.txbSucesionMixto = new System.Windows.Forms.TextBox();
+            this.btnGenerarMixto = new System.Windows.Forms.Button();
             this.pnlVonNeumann.SuspendLayout();
             this.pnlFibonacci.SuspendLayout();
             this.pnlMultiplicativo.SuspendLayout();
             this.pnlAditivo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epIngreseSemilla)).BeginInit();
+            this.pnlMixtoCongruencia.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -126,7 +140,7 @@
             this.rdbVonNeumann.AutoSize = true;
             this.rdbVonNeumann.Location = new System.Drawing.Point(52, 62);
             this.rdbVonNeumann.Name = "rdbVonNeumann";
-            this.rdbVonNeumann.Size = new System.Drawing.Size(93, 19);
+            this.rdbVonNeumann.Size = new System.Drawing.Size(104, 19);
             this.rdbVonNeumann.TabIndex = 1;
             this.rdbVonNeumann.TabStop = true;
             this.rdbVonNeumann.Text = "Von Neumann";
@@ -138,7 +152,7 @@
             this.rdbFibonacci.AutoSize = true;
             this.rdbFibonacci.Location = new System.Drawing.Point(202, 62);
             this.rdbFibonacci.Name = "rdbFibonacci";
-            this.rdbFibonacci.Size = new System.Drawing.Size(73, 19);
+            this.rdbFibonacci.Size = new System.Drawing.Size(78, 19);
             this.rdbFibonacci.TabIndex = 2;
             this.rdbFibonacci.TabStop = true;
             this.rdbFibonacci.Text = "Fibonacci";
@@ -150,7 +164,7 @@
             this.rdbCongruencia.AutoSize = true;
             this.rdbCongruencia.Location = new System.Drawing.Point(355, 62);
             this.rdbCongruencia.Name = "rdbCongruencia";
-            this.rdbCongruencia.Size = new System.Drawing.Size(85, 19);
+            this.rdbCongruencia.Size = new System.Drawing.Size(95, 19);
             this.rdbCongruencia.TabIndex = 3;
             this.rdbCongruencia.TabStop = true;
             this.rdbCongruencia.Text = "Congruencia";
@@ -228,7 +242,7 @@
             this.cbxIndicarInterVN.AutoSize = true;
             this.cbxIndicarInterVN.Location = new System.Drawing.Point(162, 104);
             this.cbxIndicarInterVN.Name = "cbxIndicarInterVN";
-            this.cbxIndicarInterVN.Size = new System.Drawing.Size(115, 19);
+            this.cbxIndicarInterVN.Size = new System.Drawing.Size(117, 19);
             this.cbxIndicarInterVN.TabIndex = 10;
             this.cbxIndicarInterVN.Text = "Indicar Interbalo ";
             this.cbxIndicarInterVN.UseVisualStyleBackColor = true;
@@ -252,7 +266,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(17, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 15);
+            this.label2.Size = new System.Drawing.Size(58, 15);
             this.label2.TabIndex = 8;
             this.label2.Text = "Sucesion";
             // 
@@ -289,7 +303,7 @@
             this.cbxCantidad.AutoSize = true;
             this.cbxCantidad.Location = new System.Drawing.Point(162, 67);
             this.cbxCantidad.Name = "cbxCantidad";
-            this.cbxCantidad.Size = new System.Drawing.Size(111, 19);
+            this.cbxCantidad.Size = new System.Drawing.Size(115, 19);
             this.cbxCantidad.TabIndex = 3;
             this.cbxCantidad.Text = "Indicar Cantidad";
             this.cbxCantidad.UseVisualStyleBackColor = true;
@@ -297,7 +311,7 @@
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Font = new System.Drawing.Font("Modern No. 20", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerar.Location = new System.Drawing.Point(325, 124);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(87, 82);
@@ -413,7 +427,7 @@
             this.cbxIndicarInterbFibo.AutoSize = true;
             this.cbxIndicarInterbFibo.Location = new System.Drawing.Point(139, 170);
             this.cbxIndicarInterbFibo.Name = "cbxIndicarInterbFibo";
-            this.cbxIndicarInterbFibo.Size = new System.Drawing.Size(115, 19);
+            this.cbxIndicarInterbFibo.Size = new System.Drawing.Size(117, 19);
             this.cbxIndicarInterbFibo.TabIndex = 16;
             this.cbxIndicarInterbFibo.Text = "Indicar Interbalo ";
             this.cbxIndicarInterbFibo.UseVisualStyleBackColor = true;
@@ -444,7 +458,7 @@
             this.lblcantidadFibo.AutoSize = true;
             this.lblcantidadFibo.Location = new System.Drawing.Point(11, 110);
             this.lblcantidadFibo.Name = "lblcantidadFibo";
-            this.lblcantidadFibo.Size = new System.Drawing.Size(53, 15);
+            this.lblcantidadFibo.Size = new System.Drawing.Size(60, 15);
             this.lblcantidadFibo.TabIndex = 7;
             this.lblcantidadFibo.Text = "Ingrese N";
             // 
@@ -469,7 +483,7 @@
             this.lblVariable2.AutoSize = true;
             this.lblVariable2.Location = new System.Drawing.Point(11, 54);
             this.lblVariable2.Name = "lblVariable2";
-            this.lblVariable2.Size = new System.Drawing.Size(58, 15);
+            this.lblVariable2.Size = new System.Drawing.Size(65, 15);
             this.lblVariable2.TabIndex = 1;
             this.lblVariable2.Text = "Ingrese V2";
             // 
@@ -494,7 +508,7 @@
             this.lblNumeroA.AutoSize = true;
             this.lblNumeroA.Location = new System.Drawing.Point(11, 73);
             this.lblNumeroA.Name = "lblNumeroA";
-            this.lblNumeroA.Size = new System.Drawing.Size(53, 15);
+            this.lblNumeroA.Size = new System.Drawing.Size(58, 15);
             this.lblNumeroA.TabIndex = 2;
             this.lblNumeroA.Text = "Ingrese A";
             // 
@@ -503,7 +517,7 @@
             this.lblVariable1.AutoSize = true;
             this.lblVariable1.Location = new System.Drawing.Point(11, 34);
             this.lblVariable1.Name = "lblVariable1";
-            this.lblVariable1.Size = new System.Drawing.Size(58, 15);
+            this.lblVariable1.Size = new System.Drawing.Size(65, 15);
             this.lblVariable1.TabIndex = 0;
             this.lblVariable1.Text = "Ingrese V1";
             this.lblVariable1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -537,7 +551,7 @@
             this.rdbCongruenciaAditivo.AutoSize = true;
             this.rdbCongruenciaAditivo.Location = new System.Drawing.Point(52, 88);
             this.rdbCongruenciaAditivo.Name = "rdbCongruenciaAditivo";
-            this.rdbCongruenciaAditivo.Size = new System.Drawing.Size(61, 19);
+            this.rdbCongruenciaAditivo.Size = new System.Drawing.Size(60, 19);
             this.rdbCongruenciaAditivo.TabIndex = 6;
             this.rdbCongruenciaAditivo.TabStop = true;
             this.rdbCongruenciaAditivo.Text = "Aditivo";
@@ -563,12 +577,13 @@
             this.rdbCongruenciaMixto.AutoSize = true;
             this.rdbCongruenciaMixto.Location = new System.Drawing.Point(355, 89);
             this.rdbCongruenciaMixto.Name = "rdbCongruenciaMixto";
-            this.rdbCongruenciaMixto.Size = new System.Drawing.Size(54, 19);
+            this.rdbCongruenciaMixto.Size = new System.Drawing.Size(55, 19);
             this.rdbCongruenciaMixto.TabIndex = 8;
             this.rdbCongruenciaMixto.TabStop = true;
             this.rdbCongruenciaMixto.Text = "Mixto";
             this.rdbCongruenciaMixto.UseVisualStyleBackColor = true;
             this.rdbCongruenciaMixto.Visible = false;
+            this.rdbCongruenciaMixto.CheckedChanged += new System.EventHandler(this.rdbCongruenciaMixto_CheckedChanged);
             // 
             // pnlMultiplicativo
             // 
@@ -726,6 +741,7 @@
             // 
             // pnlAditivo
             // 
+            this.pnlAditivo.Controls.Add(this.pnlMixtoCongruencia);
             this.pnlAditivo.Controls.Add(this.lblAditivoIngrNewSemilla);
             this.pnlAditivo.Controls.Add(this.txbAditivoSusecion);
             this.pnlAditivo.Controls.Add(this.txbAditivoIngrSemilla);
@@ -845,9 +861,127 @@
             this.epIngreseSemilla.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.epIngreseSemilla.ContainerControl = this;
             // 
+            // pnlMixtoCongruencia
+            // 
+            this.pnlMixtoCongruencia.Controls.Add(this.btnGenerarMixto);
+            this.pnlMixtoCongruencia.Controls.Add(this.txbSucesionMixto);
+            this.pnlMixtoCongruencia.Controls.Add(this.lblnMixto);
+            this.pnlMixtoCongruencia.Controls.Add(this.lblaMixto);
+            this.pnlMixtoCongruencia.Controls.Add(this.lblcMixto);
+            this.pnlMixtoCongruencia.Controls.Add(this.lblmMixto);
+            this.pnlMixtoCongruencia.Controls.Add(this.lblSemillaMixto);
+            this.pnlMixtoCongruencia.Controls.Add(this.txbnMixto);
+            this.pnlMixtoCongruencia.Controls.Add(this.txbaMixto);
+            this.pnlMixtoCongruencia.Controls.Add(this.txbcMixto);
+            this.pnlMixtoCongruencia.Controls.Add(this.txbmMixto);
+            this.pnlMixtoCongruencia.Controls.Add(this.txbSemillaMixto);
+            this.pnlMixtoCongruencia.Location = new System.Drawing.Point(0, 0);
+            this.pnlMixtoCongruencia.Name = "pnlMixtoCongruencia";
+            this.pnlMixtoCongruencia.Size = new System.Drawing.Size(513, 320);
+            this.pnlMixtoCongruencia.TabIndex = 11;
+            // 
+            // txbSemillaMixto
+            // 
+            this.txbSemillaMixto.Location = new System.Drawing.Point(126, 33);
+            this.txbSemillaMixto.Name = "txbSemillaMixto";
+            this.txbSemillaMixto.Size = new System.Drawing.Size(100, 21);
+            this.txbSemillaMixto.TabIndex = 0;
+            // 
+            // txbmMixto
+            // 
+            this.txbmMixto.Location = new System.Drawing.Point(126, 70);
+            this.txbmMixto.Name = "txbmMixto";
+            this.txbmMixto.Size = new System.Drawing.Size(100, 21);
+            this.txbmMixto.TabIndex = 1;
+            // 
+            // txbcMixto
+            // 
+            this.txbcMixto.Location = new System.Drawing.Point(126, 109);
+            this.txbcMixto.Name = "txbcMixto";
+            this.txbcMixto.Size = new System.Drawing.Size(100, 21);
+            this.txbcMixto.TabIndex = 2;
+            // 
+            // txbaMixto
+            // 
+            this.txbaMixto.Location = new System.Drawing.Point(126, 151);
+            this.txbaMixto.Name = "txbaMixto";
+            this.txbaMixto.Size = new System.Drawing.Size(100, 21);
+            this.txbaMixto.TabIndex = 3;
+            // 
+            // txbnMixto
+            // 
+            this.txbnMixto.Location = new System.Drawing.Point(126, 194);
+            this.txbnMixto.Name = "txbnMixto";
+            this.txbnMixto.Size = new System.Drawing.Size(100, 21);
+            this.txbnMixto.TabIndex = 4;
+            // 
+            // lblSemillaMixto
+            // 
+            this.lblSemillaMixto.AutoSize = true;
+            this.lblSemillaMixto.Location = new System.Drawing.Point(10, 39);
+            this.lblSemillaMixto.Name = "lblSemillaMixto";
+            this.lblSemillaMixto.Size = new System.Drawing.Size(107, 15);
+            this.lblSemillaMixto.TabIndex = 5;
+            this.lblSemillaMixto.Text = "Ingrese la Semilla";
+            // 
+            // lblmMixto
+            // 
+            this.lblmMixto.AutoSize = true;
+            this.lblmMixto.Location = new System.Drawing.Point(54, 74);
+            this.lblmMixto.Name = "lblmMixto";
+            this.lblmMixto.Size = new System.Drawing.Size(63, 15);
+            this.lblmMixto.TabIndex = 6;
+            this.lblmMixto.Text = "Ingrese m";
+            // 
+            // lblcMixto
+            // 
+            this.lblcMixto.AutoSize = true;
+            this.lblcMixto.Location = new System.Drawing.Point(59, 115);
+            this.lblcMixto.Name = "lblcMixto";
+            this.lblcMixto.Size = new System.Drawing.Size(58, 15);
+            this.lblcMixto.TabIndex = 7;
+            this.lblcMixto.Text = "Ingrese c";
+            // 
+            // lblaMixto
+            // 
+            this.lblaMixto.AutoSize = true;
+            this.lblaMixto.Location = new System.Drawing.Point(58, 157);
+            this.lblaMixto.Name = "lblaMixto";
+            this.lblaMixto.Size = new System.Drawing.Size(59, 15);
+            this.lblaMixto.TabIndex = 8;
+            this.lblaMixto.Text = "Ingrese a";
+            // 
+            // lblnMixto
+            // 
+            this.lblnMixto.AutoSize = true;
+            this.lblnMixto.Location = new System.Drawing.Point(58, 201);
+            this.lblnMixto.Name = "lblnMixto";
+            this.lblnMixto.Size = new System.Drawing.Size(59, 15);
+            this.lblnMixto.TabIndex = 9;
+            this.lblnMixto.Text = "ingrese n";
+            // 
+            // txbSucesionMixto
+            // 
+            this.txbSucesionMixto.Location = new System.Drawing.Point(277, 30);
+            this.txbSucesionMixto.Multiline = true;
+            this.txbSucesionMixto.Name = "txbSucesionMixto";
+            this.txbSucesionMixto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txbSucesionMixto.Size = new System.Drawing.Size(209, 186);
+            this.txbSucesionMixto.TabIndex = 10;
+            // 
+            // btnGenerarMixto
+            // 
+            this.btnGenerarMixto.Location = new System.Drawing.Point(188, 240);
+            this.btnGenerarMixto.Name = "btnGenerarMixto";
+            this.btnGenerarMixto.Size = new System.Drawing.Size(94, 43);
+            this.btnGenerarMixto.TabIndex = 11;
+            this.btnGenerarMixto.Text = "Generar";
+            this.btnGenerarMixto.UseVisualStyleBackColor = true;
+            this.btnGenerarMixto.Click += new System.EventHandler(this.btnGenerarMixto_Click);
+            // 
             // appGeneradores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 454);
             this.Controls.Add(this.pnlAditivo);
@@ -861,7 +995,7 @@
             this.Controls.Add(this.rdbFibonacci);
             this.Controls.Add(this.rdbVonNeumann);
             this.Controls.Add(this.lblTitulo);
-            this.Font = new System.Drawing.Font("Modern No. 20", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "appGeneradores";
             this.Text = "AppGeneradores";
             this.pnlVonNeumann.ResumeLayout(false);
@@ -873,6 +1007,8 @@
             this.pnlAditivo.ResumeLayout(false);
             this.pnlAditivo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epIngreseSemilla)).EndInit();
+            this.pnlMixtoCongruencia.ResumeLayout(false);
+            this.pnlMixtoCongruencia.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -954,6 +1090,19 @@
         private System.Windows.Forms.Label lblAditivoIngrNewSemilla;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ErrorProvider epIngreseSemilla;
+        private System.Windows.Forms.Panel pnlMixtoCongruencia;
+        private System.Windows.Forms.TextBox txbaMixto;
+        private System.Windows.Forms.TextBox txbcMixto;
+        private System.Windows.Forms.TextBox txbmMixto;
+        private System.Windows.Forms.TextBox txbSemillaMixto;
+        private System.Windows.Forms.Button btnGenerarMixto;
+        private System.Windows.Forms.TextBox txbSucesionMixto;
+        private System.Windows.Forms.Label lblnMixto;
+        private System.Windows.Forms.Label lblaMixto;
+        private System.Windows.Forms.Label lblcMixto;
+        private System.Windows.Forms.Label lblmMixto;
+        private System.Windows.Forms.Label lblSemillaMixto;
+        private System.Windows.Forms.TextBox txbnMixto;
     }
 }
 
